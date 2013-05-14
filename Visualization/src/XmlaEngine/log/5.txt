@@ -1,0 +1,825 @@
+show the ParsedMDX.......
+schema name is:test
+cube name is:mySales
+show one of the Axes:
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[Measures].[store_sales]
+                the member's value is:store_sales
+                the member's level is:MeasuresLevel
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+            the member is:[time.time].[1997]
+                the member's value is:1997
+                the member's level is:year
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[Measures].[store_sales]
+                the member's value is:store_sales
+                the member's level is:MeasuresLevel
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+            the member is:[time.time].[1998]
+                the member's value is:1998
+                the member's level is:year
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+show one of the Axes:
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts]
+                the member's value is:Allcusts
+                the member's level is:conttry
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts]
+                the member's value is:Allcusts
+                the member's level is:conttry
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+            the member is:[store.store].[All stores].[Canada]
+                the member's value is:Canada
+                the member's level is:contry
+                the member's ancestorVals:{All stores}
+                the member's ancestorLevels:{(All)}
+                isAll:0
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts]
+                the member's value is:Allcusts
+                the member's level is:conttry
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+            the member is:[store.store].[All stores].[Mexico]
+                the member's value is:Mexico
+                the member's level is:contry
+                the member's ancestorVals:{All stores}
+                the member's ancestorLevels:{(All)}
+                isAll:0
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts]
+                the member's value is:Allcusts
+                the member's level is:conttry
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+            the member is:[store.store].[All stores].[USA]
+                the member's value is:USA
+                the member's level is:contry
+                the member's ancestorVals:{All stores}
+                the member's ancestorLevels:{(All)}
+                isAll:0
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Canada]
+                the member's value is:Canada
+                the member's level is:conttry
+                the member's ancestorVals:{Allcusts}
+                the member's ancestorLevels:{(All)}
+                isAll:0
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico]
+                the member's value is:Mexico
+                the member's level is:conttry
+                the member's ancestorVals:{Allcusts}
+                the member's ancestorLevels:{(All)}
+                isAll:0
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Acapulco]
+                the member's value is:Acapulco
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Camacho]
+                the member's value is:Camacho
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Guadalajara]
+                the member's value is:Guadalajara
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Hidalgo]
+                the member's value is:Hidalgo
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[La Cruz]
+                the member's value is:La Cruz
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Merida]
+                the member's value is:Merida
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Mexico City]
+                the member's value is:Mexico City
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Orizaba]
+                the member's value is:Orizaba
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[San Andres]
+                the member's value is:San Andres
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Santa Anita]
+                the member's value is:Santa Anita
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Santa Fe]
+                the member's value is:Santa Fe
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Tixapan]
+                the member's value is:Tixapan
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Tlaxiaco]
+                the member's value is:Tlaxiaco
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA]
+                the member's value is:USA
+                the member's level is:conttry
+                the member's ancestorVals:{Allcusts}
+                the member's ancestorLevels:{(All)}
+                isAll:0
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+show one of the QueryTuples in the slicer:
+         show the members in this QueryTuple: 
+INFO: class AggFileReader--Constructor
+time.time.year
+time.time.month
+time.time.id
+cust.cust.conttry
+cust.cust.city
+cust.cust.id
+store.store.contry
+store.store.city
+store.store.id
+Measures.Measures.store_sales
+Measures.Measures.store_cost
+Measures.Measures.unit_sales
+INFO: class MolapCCInvertListQuery--Execute query
+INFO: class MolapCCInvertListQuery--getQueryPoints
+INFO: getCartesianProduct
+dim:Measures
+hier:Measures
+dim:time
+hier:time
+time.time.year:1997
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+dim:store
+hier:store
+store.store.contry:Canada
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+dim:store
+hier:store
+store.store.contry:Mexico
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+dim:store
+hier:store
+store.store.contry:USA
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Canada
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:Measures
+hier:Measures
+dim:time
+hier:time
+time.time.year:1998
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+dim:store
+hier:store
+store.store.contry:Canada
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+dim:store
+hier:store
+store.store.contry:Mexico
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+dim:store
+hier:store
+store.store.contry:USA
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Canada
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+dim:store
+hier:store
+INFO: getCartesianProduct
+INFO: class MolapCCInvertListQuery--execute point query
+3.004the query time:3.004
+mdx:SELECT CrossJoin({[Measures].[store_sales]}, {[time].[1997], [time].[1998]}) ON columns, Hierarchize(Union(Union(Union(CrossJoin({[cust].[Allcusts]}, {[store].[All stores]}), CrossJoin({[cust].[Allcusts]}, [store].[All stores].Children)), CrossJoin([cust].[Allcusts].Children, {[store].[All stores]})), CrossJoin([cust].[Allcusts].[Mexico].Children, {[store].[All stores]}))) ON rows FROM mySales
+ResultSet is:
+0:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+1:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+2:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+3:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+4:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+5:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+6:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+7:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+8:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+9:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+10:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+11:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+12:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+13:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+14:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+15:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+16:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+17:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+18:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+19:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+20:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+21:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+22:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+23:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+24:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+25:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+26:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+27:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+28:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+29:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+30:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+31:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+32:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+33:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+34:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+35:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+36:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+37:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+38:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+39:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+serializeSchema time:0.01
+serializeOlapInfo time:0.01
+Axes0:0.01
+tuplei0:0.01
+tuplei1:0.02
+End Axes0:0.02
+Axes1:0.02
+tuplei0:0.02
+tuplei1:2.644
+tuplei2:2.644
+tuplei3:2.644
+tuplei4:2.644
+tuplei5:2.644
+tuplei6:2.644
+tuplei7:2.654
+tuplei8:2.654
+tuplei9:2.654
+tuplei10:2.654
+tuplei11:2.654
+tuplei12:2.654
+tuplei13:2.654
+tuplei14:2.654
+tuplei15:2.654
+tuplei16:2.654
+tuplei17:2.654
+tuplei18:2.654
+tuplei19:2.664
+End Axes1:2.664
+After Axis:2.664
+After slicerAxis:2.664
+serializeAxesTF time:2.664
+serializeCellData time:2.664

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/login.do" location="-30,105" dimension="232,88" />
+  <StrutsActivity path="/saveDS.do" location="510,150" dimension="286,84" />
+  <StrutsActivity path="/preCompute.do" location="615,540" dimension="310,84" />
+  <StrutsActivity path="/addSchema.do" location="255,660" dimension="304,84" />
+  <StrutsActivity path="/delSchema.do" location="-105,645" dimension="304,84" />
+  <StrutsActivity path="/addTerm.do" location="-240,360" dimension="292,84" />
+  <StrutsActivity path="/Login.jsp" location="-165,0" dimension="150,100" />
+  <StrutsActivity path="/main.jsp" location="135,240" dimension="150,100" />
+  <StrutsActivity path="/SaveDSSuccess.jsp" location="855,150" dimension="150,100" />
+  <StrutsActivity path="/error.jsp" location="450,270" dimension="150,100" />
+  <StrutsActivity path="/editDS.jsp" location="720,75" dimension="106,48" />
+  <StrutsActivity path="/preComputeSuccess.jsp" location="675,690" dimension="150,100" />
+  <StrutsActivity path="/preComputation.jsp" location="990,525" dimension="150,100" />
+  <StrutsActivity path="/addSchemaSucceed.jsp" location="60,795" dimension="150,100" />
+  <StrutsActivity path="/newSchema.jsp" location="330,810" dimension="150,100" />
+  <StrutsActivity path="/delSchemaSuccess.jsp" location="-315,585" dimension="150,100" />
+  <StrutsActivity path="/delSchema.jsp" location="-90,705" dimension="124,48" />
+  <StrutsActivity path="/studyfail.jsp" location="-150,255" dimension="124,48" />
+  <StrutsActivity path="/studyresult.jsp" location="-300,255" dimension="136,48" />
+  <StrutsActivity path="/klextract.jsp" location="-480,375" dimension="124,48" />
+  <StrutsActivity path="/ichilqdw/klstudy.jsp" location="-525,450" dimension="150,100" />
+  <StrutsActivity path="/ichilqdw/studyresult.jsp" location="-45,510" dimension="150,100" />
+  <StrutsTransition id="/addTerm.do,success,/studyresult.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-179,360" />
+      <AbsolutePoint location="-179,303" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/preComputation.jsp,null,/preCompute.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="990,575" />
+      <AbsolutePoint location="925,575" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Login.jsp,null,/login.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-75,100" />
+      <AbsolutePoint location="-75,149" />
+      <AbsolutePoint location="-30,149" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addSchema.do,addSchemaSuccess,/addSchemaSucceed.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="315,744" />
+      <AbsolutePoint location="315,845" />
+      <AbsolutePoint location="210,845" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/saveDS.do,SaveFailure,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="585,234" />
+      <AbsolutePoint location="585,270" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/saveDS.do,SaveSuccess,/SaveDSSuccess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="796,192" />
+      <AbsolutePoint location="855,192" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/newSchema.jsp,null,/addSchema.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="405,810" />
+      <AbsolutePoint location="405,744" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/delSchema.jsp,null,/delSchema.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-90,744" />
+      <AbsolutePoint location="-240,744" />
+      <AbsolutePoint location="-240,700" />
+      <AbsolutePoint location="-105,700" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/delSchema.do,delSchemaFailure,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="187,645" />
+      <AbsolutePoint location="187,355" />
+      <AbsolutePoint location="450,355" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/delSchema.do,delSchemaSuccess,/delSchemaSuccess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-105,670" />
+      <AbsolutePoint location="-165,670" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,success,/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="150,193" />
+      <AbsolutePoint location="150,240" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editDS.jsp,null,/saveDS.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="773,123" />
+      <AbsolutePoint location="773,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addSchema.do,addSchemaFailure,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="525,660" />
+      <AbsolutePoint location="525,370" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/preCompute.do,PreComSuccess,/preComputeSuccess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="770,624" />
+      <AbsolutePoint location="770,690" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addTerm.do,failure,/studyfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-94,360" />
+      <AbsolutePoint location="-94,303" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/preCompute.do,PreComFailure,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="615,582" />
+      <AbsolutePoint location="555,582" />
+      <AbsolutePoint location="555,370" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/klextract.jsp,null,/addTerm.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-356,399" />
+      <AbsolutePoint location="-240,399" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,failure,/Login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-30,179" />
+      <AbsolutePoint location="-105,179" />
+      <AbsolutePoint location="-105,100" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ichilqdw/klstudy.jsp,null,/addTerm.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-375,495" />
+      <AbsolutePoint location="-90,495" />
+      <AbsolutePoint location="-90,444" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

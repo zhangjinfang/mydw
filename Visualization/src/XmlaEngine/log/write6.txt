@@ -1,0 +1,101 @@
+send:
+================================================================================
+HTTP/1.1 200 OK
+
+Server: Microsoft-IIS/5.1
+
+Date: Tue, 26 Dec 2006 12:13:11 GMT
+
+Content-Type: text/xml
+
+charset: "utf-8"
+
+Transfer-encoding: chunked
+
+
+
+c11
+
+<?xml version="1.0" encoding="gb2312"?>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+
+<SOAP-ENV:Body>
+
+<ns1:DiscoverResponse xmlns:ns1="urn:schemas-microsoft-com:xml-analysis">
+
+<ns1:return xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset">
+
+<xsd:schema xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sql="urn:schemas-microsoft-com:xml-sql" elementFormDefault="qualified">
+
+<xsd:element name="root">
+
+<xsd:complexType>
+
+<xsd:sequence>
+
+<xsd:element name="row" type="row" minOccurs="0" maxOccurs="unbounded"/></xsd:sequence></xsd:complexType></xsd:element>
+
+<xsd:simpleType name="uuid">
+
+<xsd:restriction base="xsd:string">
+
+<xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/></xsd:restriction></xsd:simpleType>
+
+<xsd:complexType name="row">
+
+<xsd:sequence>
+
+<xsd:element name="CATALOG_NAME" type="xsd:string" sql:field="CATALOG_NAME" minOccurs="0"/>
+
+<xsd:element name="SCHEMA_NAME" type="xsd:string" sql:field="SCHEMA_NAME" minOccurs="0"/>
+
+<xsd:element name="CUBE_NAME" type="xsd:string" sql:field="CUBE_NAME" minOccurs="0"/>
+
+<xsd:element name="DIMENSION_UNIQUE_NAME" type="xsd:string" sql:field="DIMENSION_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="HIERARCHY_UNIQUE_NAME" type="xsd:string" sql:field="HIERARCHY_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="LEVEL_UNIQUE_NAME" type="xsd:string" sql:field="LEVEL_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="MEMBER_UNIQUE_NAME" type="xsd:string" sql:field="MEMBER_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="PROPERTY_TYPE" type="xsd:short" sql:field="PROPERTY_TYPE"/>
+
+<xsd:element name="PROPERTY_NAME" type="xsd:string" sql:field="PROPERTY_NAME" minOccurs="0"/>
+
+<xsd:element name="PROPERTY_CAPTION" type="xsd:string" sql:field="PROPERTY_CAPTION" minOccurs="0"/>
+
+<xsd:element name="DATA_TYPE" type="xsd:unsignedShort" sql:field="DATA_TYPE"/>
+
+<xsd:element name="CHARACTER_MAXIMUM_LENGTH" type="xsd:unsignedInt" sql:field="CHARACTER_MAXIMUM_LENGTH" minOccurs="0"/>
+
+<xsd:element name="CHARACTER_OCTET_LENGTH" type="xsd:unsignedInt" sql:field="CHARACTER_OCTET_LENGTH" minOccurs="0"/>
+
+<xsd:element name="NUMERIC_PRECISION" type="xsd:unsignedShort" sql:field="NUMERIC_PRECISION" minOccurs="0"/>
+
+<xsd:element name="NUMERIC_SCALE" type="xsd:short" sql:field="NUMERIC_SCALE" minOccurs="0"/>
+
+<xsd:element name="DESCRIPTION" type="xsd:string" sql:field="DESCRIPTION" minOccurs="0"/>
+
+<xsd:element name="PROPERTY_CONTENT_TYPE" type="xsd:short" sql:field="PROPERTY_CONTENT_TYPE" minOccurs="0"/>
+
+<xsd:element name="PROPERTY_NAME_SQL_COLUMN_NAME" type="xsd:string" sql:field="PROPERTY_NAME_SQL_COLUMN_NAME" minOccurs="0"/></xsd:sequence></xsd:complexType></xsd:schema>
+
+</root>
+
+</ns1:return>
+
+</ns1:DiscoverResponse>
+
+</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>
+
+0
+
+
+
+

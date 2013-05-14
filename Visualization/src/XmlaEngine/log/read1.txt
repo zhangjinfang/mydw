@@ -1,0 +1,25 @@
+Read:0
+================================================================================
+POST / HTTP/1.1
+
+Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+Content-Type: text/xml; charset=utf-8
+
+Content-Length: 482
+
+SOAPAction: ""
+
+Cache-Control: no-cache
+
+Pragma: no-cache
+
+User-Agent: Java/1.6.0_02
+
+Host: localhost:81
+
+Connection: keep-alive
+
+
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><x1:preCompute xmlns:x1="scut.south.c4.230.lcx"><x2:schemaname xmlns:x2="scut.south.c4.230.lcl">FoodMart2000</x2:schemaname><x3:cubename xmlns:x3="scut.south.c4.230.czp">Sales</x3:cubename><x4:olaptype xmlns:x4="scut.south.c4.230.wf">toAdd</x4:olaptype><x5:algorithm xmlns:x5="scut.south.c4.230.wz">toAdd</x5:algorithm></x1:preCompute></SOAP-ENV:Body></SOAP-ENV:Envelope>

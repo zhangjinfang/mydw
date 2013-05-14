@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Schemas>
+    <Schema name="FoodMart" filepath="DWServer/metadata/FoodMart.xml"/>
+	<Schema name="wuliu2" filepath="DWServer/metadata/wuliu2.xml"/>
+</Schemas>

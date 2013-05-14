@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<Config>
+	<FoodMart2000>
+	  <Sales>
+ 	   <Alg>MolapCCPreComputation</Alg>
+	   <QryAlg>MolapCCInvertListQuery</QryAlg>
+    </Sales>
+	</FoodMart2000>
+	<sales>
+	  <Sales>
+ 	   <Alg>MolapCCPreComputation</Alg>
+	   <QryAlg>MolapCCInvertListQuery</QryAlg>
+    </Sales>
+	</sales>
+</Config>

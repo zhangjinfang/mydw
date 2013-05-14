@@ -1,0 +1,25 @@
+Read:0
+================================================================================
+POST / HTTP/1.1
+
+Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+SOAPAction: "urn:schemas-microsoft-com:xml-analysis:Execute"
+
+Content-Type: text/xml; charset=utf-8
+
+Content-Length: 667
+
+Cache-Control: no-cache
+
+Pragma: no-cache
+
+User-Agent: Java/1.6.0_02
+
+Host: localhost:81
+
+Connection: keep-alive
+
+
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><Execute xmlns="urn:schemas-microsoft-com:xml-analysis"><Command><Statement>SELECT CrossJoin({[Measures].[store_sales]}, {[time].[1997], [time].[1998]}) ON columns, CrossJoin(Hierarchize(Union({[cust].[Allcusts]}, [cust].[Allcusts].Children)), {[store].[All stores]}) ON rows FROM mySales</Statement></Command><Properties><PropertyList><AxisFormat>TupleFormat</AxisFormat><Format>Multidimensional</Format><Catalog>test</Catalog><DataSourceInfo>Local Analysis Server</DataSourceInfo></PropertyList></Properties></Execute></SOAP-ENV:Body></SOAP-ENV:Envelope>

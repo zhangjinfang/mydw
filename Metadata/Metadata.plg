@@ -1,0 +1,130 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Metadata - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP4255.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/Metadata.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"F:\昆工\git\mydw\Metadata\CPP\XSchemas.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\calcMember.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\DataSource.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\DWXercesDefs.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\DWXML.CPP"
+"F:\昆工\git\mydw\Metadata\CPP\Hierarchy.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\Level.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\Measure.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\Member.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\Test1.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\VCAPPDefs.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\XCube.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\XProperty.cpp"
+"F:\昆工\git\mydw\Metadata\CPP\XSchema.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP4255.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP4256.tmp" with contents
+[
+/nologo /out:"..\lib\Metadata.lib" 
+".\Debug\XSchemas.obj"
+".\Debug\calcMember.obj"
+".\Debug\DataSource.obj"
+".\Debug\Dimension.obj"
+".\Debug\DWXercesDefs.obj"
+".\Debug\DWXML.OBJ"
+".\Debug\Hierarchy.obj"
+".\Debug\Level.obj"
+".\Debug\Measure.obj"
+".\Debug\Member.obj"
+".\Debug\Test1.obj"
+".\Debug\VCAPPDefs.obj"
+".\Debug\XCube.obj"
+".\Debug\XProperty.obj"
+".\Debug\XSchema.obj"
+]
+Creating command line "link.exe -lib @C:\Users\ADMINI~1\AppData\Local\Temp\RSP4256.tmp"
+<h3>Output Window</h3>
+Compiling...
+XSchemas.cpp
+calcMember.cpp
+DataSource.cpp
+Dimension.cpp
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(35) : error C2039: '_facttable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(35) : error C2039: '_facttable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(99) : error C2039: 'getFactTable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(101) : error C2673: 'getFactTable' : global functions do not have 'this' pointers
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(101) : error C2227: left of '->_facttable' must point to class/struct/union
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(141) : error C2039: '_facttable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(161) : error C2511: 'parserDimension' : overloaded member function 'bool (class DWSCHEMA_CPP_NAMESPACE::XSchema *,class xercesc_2_7::DOMElement *)' not found in 'DWSCHEMA_CPP_NAMESPACE::Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(240) : error C2511: 'parserDimension' : overloaded member function 'bool (class DWSCHEMA_CPP_NAMESPACE::XCube *,class xercesc_2_7::DOMElement *)' not found in 'DWSCHEMA_CPP_NAMESPACE::Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(324) : error C2039: 'getFactTable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(326) : error C2039: '_facttable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(326) : error C2228: left of '.c_str' must have class/struct/union type
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(357) : error C2039: 'getFactTable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(359) : error C2039: '_facttable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(359) : error C2228: left of '.c_str' must have class/struct/union type
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(424) : error C2039: 'getFactTable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(425) : error C2039: '_facttable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Dimension.cpp(425) : error C2228: left of '.c_str' must have class/struct/union type
+DWXercesDefs.cpp
+DWXML.CPP
+Hierarchy.cpp
+F:\昆工\git\mydw\Metadata\CPP\Hierarchy.cpp(116) : error C2556: 'const class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &__thiscall DWSCHEMA_CPP_NAMESPACE::Hierarchy::getName(void) const' : overloaded function differs only by return type from 'class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall DWSCHEMA_CPP_NAMESPACE::Hierarchy::getName(void) const'
+        f:\昆工\git\mydw\include\dwschemac\hierarchy.h(61) : see declaration of 'getName'
+F:\昆工\git\mydw\Metadata\CPP\Hierarchy.cpp(116) : error C2040: 'getName' : 'const class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &(void) const' differs in levels of indirection from 'class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > (void) const'
+F:\昆工\git\mydw\Metadata\CPP\Hierarchy.cpp(155) : error C2039: 'getHasAll' : is not a member of 'Hierarchy'
+        f:\昆工\git\mydw\include\dwschemac\hierarchy.h(28) : see declaration of 'Hierarchy'
+F:\昆工\git\mydw\Metadata\CPP\Hierarchy.cpp(157) : error C2673: 'getHasAll' : global functions do not have 'this' pointers
+F:\昆工\git\mydw\Metadata\CPP\Hierarchy.cpp(157) : error C2227: left of '->_allmembername' must point to class/struct/union
+Level.cpp
+F:\昆工\git\mydw\Metadata\CPP\Level.cpp(130) : error C2065: 'LoadMemberStuts' : undeclared identifier
+F:\昆工\git\mydw\Metadata\CPP\Level.cpp(166) : error C2039: 'getFactTable' : is not a member of 'Dimension'
+        f:\昆工\git\mydw\include\dwschemac\dimension.h(27) : see declaration of 'Dimension'
+F:\昆工\git\mydw\Metadata\CPP\Level.cpp(308) : error C2039: 'LoadMemberStuts' : is not a member of 'Level'
+        f:\昆工\git\mydw\include\dwschemac\level.h(29) : see declaration of 'Level'
+F:\昆工\git\mydw\Metadata\CPP\Level.cpp(308) : error C2039: 'LoadMemberStuts' : is not a member of 'Level'
+        f:\昆工\git\mydw\include\dwschemac\level.h(29) : see declaration of 'Level'
+Measure.cpp
+Member.cpp
+d:\program files\microsoft visual studio\vc98\include\streambuf(87) : warning C4786: 'std::_Tree<int,std::pair<int const ,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::map<int,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::less<int>,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Kfn,std::less<int>,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >' : identifier was truncated to '255' characters in the debug information
+d:\program files\microsoft visual studio\vc98\include\streambuf(87) : warning C4786: 'std::_Tree<int,std::pair<int const ,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::map<int,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::less<int>,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Kfn,std::less<int>,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::const_iterator' : identifier was truncated to '255' characters in the debug information
+d:\program files\microsoft visual studio\vc98\include\streambuf(87) : warning C4786: 'std::_Tree<int,std::pair<int const ,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::map<int,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::less<int>,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Kfn,std::less<int>,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::iterator' : identifier was truncated to '255' characters in the debug information
+d:\program files\microsoft visual studio\vc98\include\streambuf(87) : warning C4786: 'std::_Tree<int,std::pair<int const ,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::map<int,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::less<int>,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Kfn,std::less<int>,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Node' : identifier was truncated to '255' characters in the debug information
+d:\program files\microsoft visual studio\vc98\include\streambuf(87) : warning C4786: 'std::_Tree<int,std::pair<int const ,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::map<int,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::less<int>,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Kfn,std::less<int>,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Redbl' : identifier was truncated to '255' characters in the debug information
+d:\program files\microsoft visual studio\vc98\include\streambuf(87) : warning C4786: 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >' : identifier was truncated to '255' characters in the debug information
+d:\program files\microsoft visual studio\vc98\include\streambuf(87) : warning C4786: 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::map<std::basic_string<char,std::char_traTest1.cpp
+its<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::const_iterator' : identifier was truncated to '255' characters in the debug information
+d:\program files\microsoft visual studio\vc98\include\streambuf(87) : warning C4786: 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::iterator' : identifier was truncated to '255' characters in the debug information
+d:\program files\microsoft visual studio\vc98\include\streambuf(87) : warning C4786: 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Node' : identifier was truncated to '255' characters in the debug information
+d:\program files\microsoft visual studio\vc98\include\streambuf(87) : warning C4786: 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Redbl' : identifier was truncated to '255' characters in the debug information
+F:\昆工\git\mydw\Metadata\CPP\Test1.cpp(4) : fatal error C1083: Cannot open include file: 'Dimension.h': No such file or directory
+VCAPPDefs.cpp
+XCube.cpp
+F:\昆工\git\mydw\Metadata\CPP\XCube.cpp(275) : error C2661: 'parserDimension' : no overloaded function takes 2 parameters
+XProperty.cpp
+XSchema.cpp
+F:\昆工\git\mydw\Metadata\CPP\XSchema.cpp(205) : error C2661: 'parserDimension' : no overloaded function takes 2 parameters
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+Metadata.lib - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

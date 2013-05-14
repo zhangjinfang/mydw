@@ -1,0 +1,25 @@
+Read:0
+================================================================================
+POST / HTTP/1.1
+
+SOAPAction: "urn:schemas-microsoft-com:xml-analysis:Execute"
+
+Content-Type: text/xml; charset="utf-8"
+
+Content-Length: 597
+
+Cache-Control: no-cache
+
+Pragma: no-cache
+
+User-Agent: Java/1.5.0_03
+
+Host: localhost:81
+
+Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+Connection: keep-alive
+
+
+
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header></soap-env:Header><soap-env:Body><Execute xmlns="urn:schemas-microsoft-com:xml-analysis"><Command xmlns=""><Statement>SELECT {[Measures].[freq]} ON columns, {[WZXWDM].[10380A], [WZXWDM].[1229]} ON rows FROM WZ WHERE [Time].[04]</Statement></Command><Properties><PropertyList><Catalog>OLAP_TestDB</Catalog><AxisFormat>TupleFormat</AxisFormat><DataSourceInfo>Local Analysis Server</DataSourceInfo><Format>Multidimensional</Format></PropertyList></Properties></Execute></soap-env:Body></soap-env:Envelope>

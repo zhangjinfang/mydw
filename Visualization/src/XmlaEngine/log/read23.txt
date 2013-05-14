@@ -1,0 +1,25 @@
+Read:0
+================================================================================
+POST / HTTP/1.1
+
+Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+SOAPAction: "urn:schemas-microsoft-com:xml-analysis:Execute"
+
+Content-Type: text/xml; charset=utf-8
+
+Content-Length: 1229
+
+Cache-Control: no-cache
+
+Pragma: no-cache
+
+User-Agent: Java/1.6.0_02
+
+Host: localhost:81
+
+Connection: keep-alive
+
+
+
+

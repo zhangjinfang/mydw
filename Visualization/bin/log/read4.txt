@@ -1,0 +1,25 @@
+Read:0
+================================================================================
+POST / HTTP/1.1
+
+SOAPAction: "urn:schemas-microsoft-com:xml-analysis:Discover"
+
+Content-Type: text/xml; charset="utf-8"
+
+Content-Length: 579
+
+Cache-Control: no-cache
+
+Pragma: no-cache
+
+User-Agent: Java/1.5.0_03
+
+Host: localhost:81
+
+Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+Connection: keep-alive
+
+
+
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header></soap-env:Header><soap-env:Body><Discover xmlns="urn:schemas-microsoft-com:xml-analysis"><RequestType xmlns="">MDSCHEMA_LEVELS</RequestType><Restrictions><RestrictionList><CATALOG_NAME>OLAP_TestDB</CATALOG_NAME><CUBE_NAME>WZ</CUBE_NAME></RestrictionList></Restrictions><Properties><PropertyList><Catalog>OLAP_TestDB</Catalog><DataSourceInfo>Local Analysis Server</DataSourceInfo><Content>SchemaData</Content></PropertyList></Properties></Discover></soap-env:Body></soap-env:Envelope>

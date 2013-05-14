@@ -1,0 +1,3 @@
+Read:0
+================================================================================
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><Execute xmlns="urn:schemas-microsoft-com:xml-analysis"><Command><Statement>SELECT {[Measures].[store_sales]} ON columns, Hierarchize(Union({[cust].[Allcusts]}, [cust].[Allcusts].Children)) ON rows FROM mySales</Statement></Command><Properties><PropertyList><AxisFormat>TupleFormat</AxisFormat><Format>Multidimensional</Format><Catalog>test</Catalog><DataSourceInfo>Local Analysis Server</DataSourceInfo></PropertyList></Properties></Execute></SOAP-ENV:Body></SOAP-ENV:Envelope>

@@ -1,0 +1,171 @@
+//loadSchemaNode()这个函数由shemaName,shemaPath生成树状图，
+function loadSchemaNode(schemaName,schemaPath)
+{	
+	//根据路径加载XML文件。
+	var schemaFile = loadXML(schemaPath);
+	
+	//定义一个树的分支，这个分支会插入showTree.txt这个文件中的treeNode_Data这个节点中。
+	var schemaNode = new WebFXTreeItem(schemaName);
+	schemaNode.nodeType = "Schema";//定义节点的类型
+	schemaNode.value = schemaName;//定义节点的值;
+	
+	
+	//sNode为schema节点。
+	var sNode = schemaFile.selectSingleNode("Schema");
+	
+	
+	
+	//获得数据源节点。
+	var name = "DataSource";
+	//定义一个数组，用来存放getnodesByName(node,name)返回的数组。
+	var nameArray = new Array();
+	//alert(schemaName);
+	nameArray = getNodesByName(sNode,name);
+	//alert(schemaName);
+	for(var i=0;i<nameArray.length;i++)
+	{
+		
+		var temp = new WebFXTreeItem('数据源:'+nameArray[i].getAttribute('url'));
+		temp.nodeType = "DataSource";//定义节点的类型
+		temp.value = nameArray[i].getAttribute('url');//定义节点的值；
+		schemaNode.add(temp);
+	}
+	
+	//添加立方体节点
+	var addCubeNode=new WebFXTreeItem("添加立方体");
+	addCubeNode.nodeType="addCube";
+	schemaNode.add(addCubeNode);
+	
+	//增加一个“立方体”的节点，包含所有的立方体。
+	var  CubeNodeCollection = new WebFXTreeItem('立方体');
+	CubeNodeCollection.nodeType = "Cubes";
+	CubeNodeCollection.value=null;
+	schemaNode.add(CubeNodeCollection);
+	
+	//增加一个“共享维度”的节点，包含所有的共享维度。
+	var  DimensionNode = new WebFXTreeItem('共享维度');
+	DimensionNode.nodeType = "Dimensions";
+	DimensionNode.value=null;
+	CubeNodeCollection.add(DimensionNode);
+	//获得Dimension节点。
+	var name = "Dimension";
+	//定义一个数组，用来存放getnodesByName(node,name)返回的数组。
+	var nameArray = new Array();
+	nameArray = getNodesByName(sNode,name);
+	for(var i=0;i<nameArray.length;i++)
+	{
+		var temp = new WebFXTreeItem(nameArray[i].getAttribute('name'));
+		temp.nodeType = "Dimension";//定义树节点的类别
+		temp.value = nameArray[i].getAttribute('name');//定义树节点的值；
+		DimensionNode.add(temp);
+	}
+	
+	//获得Cube节点。
+	var name = "Cube";
+	//定义一个数组，用来存放getnodesByName(node,name)返回的数组。
+	var nameArray = new Array();
+	nameArray = getNodesByName(sNode,name);
+	for(var i=0;i<nameArray.length;i++)
+	{
+		var cubeName=nameArray[i].getAttribute('name');
+		var cubeNode = new WebFXTreeItem(cubeName);
+		cubeNode.nodeType = "Cube";//定义树节点的类型。
+		cubeNode.value = cubeName;//定义树节点的值；
+		CubeNodeCollection.add(cubeNode);
+		
+		//在cubeNode增加"预计算"和"查询"两个节点，当用户已经进行预计算后，再显示"查询"节点
+		var preComNode = new WebFXTreeItem("预计算");
+		preComNode.nodeType = "preCom";
+		cubeNode.add(preComNode);
+		
+		//已经进行预计算，显示"查询"节点
+		if(hasPreComputed(schemaName,cubeName)==1){
+			var queryNode = new WebFXTreeItem("查询");
+			queryNode.nodeType="query";
+			cubeNode.add(queryNode);
+		}
+		
+		
+		//删除节点
+		var delCubeNode=new WebFXTreeItem("删除立方体");
+		delCubeNode.nodeType="delCube";
+		cubeNode.add(delCubeNode);
+			
+	}
+	
+	//增加删除数据仓库模式节点
+	var delSchemaNode = new WebFXTreeItem("删除模式");
+	delSchemaNode.nodeType="delSchema";
+	schemaNode.add(delSchemaNode);
+	return schemaNode;
+}
+
+
+//传入一个节点node,返回节点名字为name的数组。如node为schema,name为Dimension，则会
+//返回一个数组，存放所有Dimension的节点。
+function getNodesByName(node,name)
+{
+	var nodeLength = node.childNodes.length;
+	var nameArray = new Array();
+	var n=0;
+	
+	for(var i=0;i<nodeLength;i++)
+	{
+		if(node.childNodes[i].nodeName == name)//注意这里的相等关系判断，“＝＝”前后都要加空格。
+		{
+			nameArray[n] = node.childNodes[i];
+			n++;
+		}
+	}
+	return nameArray;
+}
+
+//检查该schema下的cube是否已经进行预计算
+function hasPreComputed(schemaName,cubeName){
+	
+	var localConfigFileLength = localConfigFile.selectSingleNode("Config").childNodes.length;
+	var configNode=localConfigFile.selectSingleNode("Config");
+	
+	for(var i=0;i<localConfigFileLength;i++){
+	
+		var schemaNode=configNode.childNodes[i];
+		
+		if(schemaNode.nodeName==schemaName){
+			
+			for(var j=0;j<schemaNode.childNodes.length;j++) {
+				
+				var cubeNode=schemaNode.childNodes[j];
+				
+				if(cubeNode.nodeName==cubeName){
+					//表示立方体未改变
+					if(cubeNode.selectSingleNode("Changed").firstChild.nodeValue=="0")
+						return 1;
+				}
+					
+			}
+		
+		}
+		
+	}
+	
+	return 0;
+	
+}
+
+//返回local-config文件
+function getLocalConfigFile(){
+
+	//指定SchemaConfig.xml 这个文件的路径。
+	var localConfigFilePath = "DWServer/conf/local-config.xml";
+	//读入这个文件。
+	var localConfigFile = loadXML(localConfigFilePath);
+	
+	return localConfigFile;
+}
+
+
+
+
+
+
+

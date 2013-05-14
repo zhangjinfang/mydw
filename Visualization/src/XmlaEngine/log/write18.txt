@@ -1,0 +1,5593 @@
+send:
+================================================================================
+HTTP/1.1 200 OK
+
+Server: Microsoft-IIS/5.1
+
+Date: Tue, 26 Dec 2006 12:13:11 GMT
+
+Content-Type: text/xml
+
+charset: "utf-8"
+
+Transfer-encoding: chunked
+
+
+
+12f6e
+
+<?xml version="1.0" encoding="gb2312"?>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+
+<SOAP-ENV:Body>
+
+<ns1:ExecuteResponse xmlns:ns1="urn:schemas-microsoft-com:xml-analysis">
+
+<ns1:return xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<root xmlns="urn:schemas-microsoft-com:xml-analysis:mddataset">
+
+<xsd:schema xmlns="urn:schemas-microsoft-com:xml-analysis:mddataset" targetNamespace="urn:schemas-microsoft-com:xml-analysis:mddataset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sql="urn:schemas-microsoft-com:xml-sql" elementFormDefault="qualified">
+
+<xsd:complexType name="MemberType">
+
+<xsd:sequence>
+
+<xsd:element name="UName" type="xsd:string"/>
+
+<xsd:element name="Caption" type="xsd:string"/>
+
+<xsd:element name="LName" type="xsd:string"/>
+
+<xsd:element name="LNum" type="xsd:unsignedInt"/>
+
+<xsd:group ref="GCustomDimProps"/></xsd:sequence>
+
+<xsd:attribute name="Hierarchy" type="xsd:string"/></xsd:complexType>
+
+<xsd:complexType name="PropType">
+
+<xsd:sequence>
+
+<xsd:element name="Default" minOccurs="0"/></xsd:sequence>
+
+<xsd:attribute name="name" type="xsd:string" use="required"/>
+
+<xsd:attribute name="type" type="xsd:QName"/></xsd:complexType>
+
+<xsd:element abstract="true" name="ECustomDimPropType" type="PropType"/>
+
+<xsd:element abstract="true" name="ECustomCellPropType" type="PropType"/>
+
+<xsd:element substitutionGroup="ECustomDimPropType" name="DisplayInfo"/>
+
+<xsd:complexType name="TupleType">
+
+<xsd:sequence>
+
+<xsd:element name="Member" type="MemberType" maxOccurs="unbounded"/></xsd:sequence></xsd:complexType>
+
+<xsd:complexType name="MembersType">
+
+<xsd:sequence>
+
+<xsd:element name="Member" type="MemberType" minOccurs="0" maxOccurs="unbounded"/></xsd:sequence>
+
+<xsd:attribute name="Hierarchy" type="xsd:string" use="required"/></xsd:complexType>
+
+<xsd:complexType name="TuplesType">
+
+<xsd:sequence>
+
+<xsd:element name="Tuple" type="TupleType" minOccurs="0" maxOccurs="unbounded"/></xsd:sequence></xsd:complexType>
+
+<xsd:group name="SetType">
+
+<xsd:choice>
+
+<xsd:element name="Members" type="MembersType"/>
+
+<xsd:element name="Tuples" type="TuplesType"/>
+
+<xsd:element name="CrossProduct" type="SetListType"/>
+
+<xsd:element name="Union">
+
+<xsd:complexType>
+
+<xsd:group ref="SetType" minOccurs="0" maxOccurs="unbounded"/></xsd:complexType></xsd:element></xsd:choice></xsd:group>
+
+<xsd:complexType name="SetListType">
+
+<xsd:group ref="SetType" minOccurs="0" maxOccurs="unbounded"/>
+
+<xsd:attribute name="Size" type="xsd:unsignedInt"/></xsd:complexType>
+
+<xsd:complexType name="OlapInfo">
+
+<xsd:sequence>
+
+<xsd:element name="CubeInfo">
+
+<xsd:complexType>
+
+<xsd:sequence>
+
+<xsd:element name="Cube" maxOccurs="unbounded">
+
+<xsd:complexType>
+
+<xsd:sequence>
+
+<xsd:element name="CubeName" type="xsd:string"/></xsd:sequence></xsd:complexType></xsd:element></xsd:sequence></xsd:complexType></xsd:element>
+
+<xsd:element name="AxesInfo">
+
+<xsd:complexType>
+
+<xsd:sequence>
+
+<xsd:element name="AxisInfo" maxOccurs="unbounded">
+
+<xsd:complexType>
+
+<xsd:sequence>
+
+<xsd:element name="HierarchyInfo" minOccurs="0" maxOccurs="unbounded">
+
+<xsd:complexType>
+
+<xsd:sequence>
+
+<xsd:element name="UName" type="PropType"/>
+
+<xsd:element name="Caption" type="PropType"/>
+
+<xsd:element name="LName" type="PropType"/>
+
+<xsd:element name="LNum" type="PropType"/>
+
+<xsd:element ref="ECustomDimPropType" minOccurs="0" maxOccurs="unbounded"/></xsd:sequence>
+
+<xsd:attribute name="name" type="xsd:string" use="required"/></xsd:complexType></xsd:element></xsd:sequence>
+
+<xsd:attribute name="name" type="xsd:string"/></xsd:complexType></xsd:element></xsd:sequence></xsd:complexType></xsd:element>
+
+<xsd:element name="CellInfo">
+
+<xsd:complexType>
+
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+
+<xsd:element name="Value" type="PropType"/>
+
+<xsd:element name="FmtValue" type="PropType"/>
+
+<xsd:element name="CellOrdinal" type="PropType"/>
+
+<xsd:element name="BackColor" type="PropType"/>
+
+<xsd:element name="ForeColor" type="PropType"/>
+
+<xsd:element ref="ECustomCellPropType"/></xsd:choice></xsd:complexType></xsd:element></xsd:sequence></xsd:complexType>
+
+<xsd:complexType name="Axes">
+
+<xsd:sequence>
+
+<xsd:element name="Axis" maxOccurs="unbounded">
+
+<xsd:complexType>
+
+<xsd:group ref="SetType" minOccurs="0" maxOccurs="unbounded"/>
+
+<xsd:attribute name="name" type="xsd:string"/></xsd:complexType></xsd:element></xsd:sequence></xsd:complexType>
+
+<xsd:complexType name="CellData">
+
+<xsd:sequence>
+
+<xsd:element name="Cell" minOccurs="0" maxOccurs="unbounded">
+
+<xsd:complexType>
+
+<xsd:sequence>
+
+<xsd:element minOccurs="0" nillable="true" name="Value"/>
+
+<xsd:element minOccurs="0" nillable="true" name="FmtValue" type="xsd:string"/>
+
+<xsd:element minOccurs="0" nillable="true" name="BackColor" type="xsd:unsignedInt"/>
+
+<xsd:element minOccurs="0" nillable="true" name="ForeColor" type="xsd:unsignedInt"/>
+
+<xsd:group ref="GCustomCellProps"/></xsd:sequence>
+
+<xsd:attribute name="CellOrdinal" type="xsd:unsignedInt" use="required"/></xsd:complexType></xsd:element></xsd:sequence></xsd:complexType>
+
+<xsd:group name="GCustomDimProps">
+
+<xsd:sequence>
+
+<xsd:element minOccurs="0" nillable="true" name="DisplayInfo" type="xsd:int"/></xsd:sequence></xsd:group>
+
+<xsd:group name="GCustomCellProps">
+
+<xsd:sequence></xsd:sequence></xsd:group>
+
+<xsd:element name="root">
+
+<xsd:complexType>
+
+<xsd:sequence>
+
+<xsd:any namespace="http://www.w3.org/2001/XMLSchema" processContents="strict" minOccurs="0"/>
+
+<xsd:element name="OlapInfo" type="OlapInfo" minOccurs="0"/>
+
+<xsd:element name="Axes" type="Axes" minOccurs="0"/>
+
+<xsd:element name="CellData" type="CellData" minOccurs="0"/></xsd:sequence></xsd:complexType></xsd:element></xsd:schema>
+
+<OlapInfo>
+
+<AxesInfo>
+
+<AxisInfo name="Axis0">
+
+<HierarchyInfo name="Measures">
+
+<UName name="[Measures].[MEMBER_UNIQUE_NAME]"/>
+
+<Caption name="[Measures].[MEMBER_CAPTION]"/>
+
+<LName name="[Measures].[LEVEL_UNIQUE_NAME]"/>
+
+<LNum name="[Measures].[LEVEL_NUMBER]"/>
+
+<DisplayInfo name="[Measures].[DISPLAY_INFO]"/>
+
+</HierarchyInfo>
+
+<HierarchyInfo name="time">
+
+<UName name="[time].[MEMBER_UNIQUE_NAME]"/>
+
+<Caption name="[time].[MEMBER_CAPTION]"/>
+
+<LName name="[time].[LEVEL_UNIQUE_NAME]"/>
+
+<LNum name="[time].[LEVEL_NUMBER]"/>
+
+<DisplayInfo name="[time].[DISPLAY_INFO]"/>
+
+</HierarchyInfo>
+
+</AxisInfo>
+
+<AxisInfo name="Axis1">
+
+<HierarchyInfo name="cust">
+
+<UName name="[cust].[MEMBER_UNIQUE_NAME]"/>
+
+<Caption name="[cust].[MEMBER_CAPTION]"/>
+
+<LName name="[cust].[LEVEL_UNIQUE_NAME]"/>
+
+<LNum name="[cust].[LEVEL_NUMBER]"/>
+
+<DisplayInfo name="[cust].[DISPLAY_INFO]"/>
+
+</HierarchyInfo>
+
+<HierarchyInfo name="store">
+
+<UName name="[store].[MEMBER_UNIQUE_NAME]"/>
+
+<Caption name="[store].[MEMBER_CAPTION]"/>
+
+<LName name="[store].[LEVEL_UNIQUE_NAME]"/>
+
+<LNum name="[store].[LEVEL_NUMBER]"/>
+
+<DisplayInfo name="[store].[DISPLAY_INFO]"/>
+
+</HierarchyInfo>
+
+</AxisInfo>
+
+<AxisInfo name="SlicerAxis">
+
+</AxisInfo>
+
+</AxesInfo>
+
+<CellInfo>
+
+<Value name="VALUE"/>
+
+<FmtValue name="FORMATTED_VALUE"/>
+
+<CellOrdinal name="CELL_ORDINAL"/>
+
+</CellInfo>
+
+</OlapInfo>
+
+<Axes>
+
+<Axis name="Axis0">
+
+<Tuples>
+
+<Tuple>
+
+<Member Hierarchy="Measures">
+
+<UName>[Measures].[store_cost]</UName>
+
+<Caption>store_cost</Caption>
+
+<LName>[Measures].[MeasuresLevel]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>0</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="time">
+
+<UName>[time].[1997]</UName>
+
+<Caption>1997</Caption>
+
+<LName>[time].[year]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>24</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="Measures">
+
+<UName>[Measures].[store_cost]</UName>
+
+<Caption>store_cost</Caption>
+
+<LName>[Measures].[MeasuresLevel]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>0</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="time">
+
+<UName>[time].[1998]</UName>
+
+<Caption>1998</Caption>
+
+<LName>[time].[year]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>24</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="Measures">
+
+<UName>[Measures].[store_sales]</UName>
+
+<Caption>store_sales</Caption>
+
+<LName>[Measures].[MeasuresLevel]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>0</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="time">
+
+<UName>[time].[1997]</UName>
+
+<Caption>1997</Caption>
+
+<LName>[time].[year]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>24</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="Measures">
+
+<UName>[Measures].[store_sales]</UName>
+
+<Caption>store_sales</Caption>
+
+<LName>[Measures].[MeasuresLevel]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>0</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="time">
+
+<UName>[time].[1998]</UName>
+
+<Caption>1998</Caption>
+
+<LName>[time].[year]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>24</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="Measures">
+
+<UName>[Measures].[unit_sales]</UName>
+
+<Caption>unit_sales</Caption>
+
+<LName>[Measures].[MeasuresLevel]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>0</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="time">
+
+<UName>[time].[1997]</UName>
+
+<Caption>1997</Caption>
+
+<LName>[time].[year]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>24</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="Measures">
+
+<UName>[Measures].[unit_sales]</UName>
+
+<Caption>unit_sales</Caption>
+
+<LName>[Measures].[MeasuresLevel]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>0</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="time">
+
+<UName>[time].[1998]</UName>
+
+<Caption>1998</Caption>
+
+<LName>[time].[year]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>24</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+</Tuples>
+
+</Axis>
+
+<Axis name="Axis1">
+
+<Tuples>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts]</UName>
+
+<Caption>Allcusts</Caption>
+
+<LName>[cust].[conttry]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>109</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts]</UName>
+
+<Caption>Allcusts</Caption>
+
+<LName>[cust].[conttry]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>109</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores].[Canada]</UName>
+
+<Caption>Canada</Caption>
+
+<LName>[store].[contry]</LName>
+
+<LNum>1</LNum>
+
+<DisplayInfo>24</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts]</UName>
+
+<Caption>Allcusts</Caption>
+
+<LName>[cust].[conttry]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>109</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores].[Mexico]</UName>
+
+<Caption>Mexico</Caption>
+
+<LName>[store].[contry]</LName>
+
+<LNum>1</LNum>
+
+<DisplayInfo>24</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts]</UName>
+
+<Caption>Allcusts</Caption>
+
+<LName>[cust].[conttry]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>109</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores].[USA]</UName>
+
+<Caption>USA</Caption>
+
+<LName>[store].[contry]</LName>
+
+<LNum>1</LNum>
+
+<DisplayInfo>24</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Canada]</UName>
+
+<Caption>Canada</Caption>
+
+<LName>[cust].[conttry]</LName>
+
+<LNum>1</LNum>
+
+<DisplayInfo>109</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico]</UName>
+
+<Caption>Mexico</Caption>
+
+<LName>[cust].[conttry]</LName>
+
+<LNum>1</LNum>
+
+<DisplayInfo>109</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Acapulco]</UName>
+
+<Caption>Acapulco</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Camacho]</UName>
+
+<Caption>Camacho</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Guadalajara]</UName>
+
+<Caption>Guadalajara</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Hidalgo]</UName>
+
+<Caption>Hidalgo</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[La Cruz]</UName>
+
+<Caption>La Cruz</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Merida]</UName>
+
+<Caption>Merida</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Mexico City]</UName>
+
+<Caption>Mexico City</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Orizaba]</UName>
+
+<Caption>Orizaba</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[San Andres]</UName>
+
+<Caption>San Andres</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Santa Anita]</UName>
+
+<Caption>Santa Anita</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Santa Fe]</UName>
+
+<Caption>Santa Fe</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Tixapan]</UName>
+
+<Caption>Tixapan</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[Mexico].[Tlaxiaco]</UName>
+
+<Caption>Tlaxiaco</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA]</UName>
+
+<Caption>USA</Caption>
+
+<LName>[cust].[conttry]</LName>
+
+<LNum>1</LNum>
+
+<DisplayInfo>109</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Albany]</UName>
+
+<Caption>Albany</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Altadena]</UName>
+
+<Caption>Altadena</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Anacortes]</UName>
+
+<Caption>Anacortes</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Arcadia]</UName>
+
+<Caption>Arcadia</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Ballard]</UName>
+
+<Caption>Ballard</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Beaverton]</UName>
+
+<Caption>Beaverton</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Bellflower]</UName>
+
+<Caption>Bellflower</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Bellingham]</UName>
+
+<Caption>Bellingham</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Berkeley]</UName>
+
+<Caption>Berkeley</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Beverly Hills]</UName>
+
+<Caption>Beverly Hills</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Bremerton]</UName>
+
+<Caption>Bremerton</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Burbank]</UName>
+
+<Caption>Burbank</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Burien]</UName>
+
+<Caption>Burien</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Burlingame]</UName>
+
+<Caption>Burlingame</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Chula Vista]</UName>
+
+<Caption>Chula Vista</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Colma]</UName>
+
+<Caption>Colma</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Concord]</UName>
+
+<Caption>Concord</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Coronado]</UName>
+
+<Caption>Coronado</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Corvallis]</UName>
+
+<Caption>Corvallis</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Daly City]</UName>
+
+<Caption>Daly City</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Downey]</UName>
+
+<Caption>Downey</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Edmonds]</UName>
+
+<Caption>Edmonds</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[El Cajon]</UName>
+
+<Caption>El Cajon</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Everett]</UName>
+
+<Caption>Everett</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Fremont]</UName>
+
+<Caption>Fremont</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Glendale]</UName>
+
+<Caption>Glendale</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Grossmont]</UName>
+
+<Caption>Grossmont</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Imperial Beach]</UName>
+
+<Caption>Imperial Beach</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Issaquah]</UName>
+
+<Caption>Issaquah</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Kirkland]</UName>
+
+<Caption>Kirkland</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[La Jolla]</UName>
+
+<Caption>La Jolla</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[La Mesa]</UName>
+
+<Caption>La Mesa</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Lake Oswego]</UName>
+
+<Caption>Lake Oswego</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Lakewood]</UName>
+
+<Caption>Lakewood</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Lebanon]</UName>
+
+<Caption>Lebanon</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Lemon Grove]</UName>
+
+<Caption>Lemon Grove</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Lincoln Acres]</UName>
+
+<Caption>Lincoln Acres</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Long Beach]</UName>
+
+<Caption>Long Beach</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Los Angeles]</UName>
+
+<Caption>Los Angeles</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Lynnwood]</UName>
+
+<Caption>Lynnwood</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Marysville]</UName>
+
+<Caption>Marysville</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Mill Valley]</UName>
+
+<Caption>Mill Valley</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Milwaukie]</UName>
+
+<Caption>Milwaukie</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[National City]</UName>
+
+<Caption>National City</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Newport Beach]</UName>
+
+<Caption>Newport Beach</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Novato]</UName>
+
+<Caption>Novato</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Oakland]</UName>
+
+<Caption>Oakland</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Olympia]</UName>
+
+<Caption>Olympia</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Oregon City]</UName>
+
+<Caption>Oregon City</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Palo Alto]</UName>
+
+<Caption>Palo Alto</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Pomona]</UName>
+
+<Caption>Pomona</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Port Orchard]</UName>
+
+<Caption>Port Orchard</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Portland]</UName>
+
+<Caption>Portland</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Puyallup]</UName>
+
+<Caption>Puyallup</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Redmond]</UName>
+
+<Caption>Redmond</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Redwood City]</UName>
+
+<Caption>Redwood City</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Renton]</UName>
+
+<Caption>Renton</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Richmond]</UName>
+
+<Caption>Richmond</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Salem]</UName>
+
+<Caption>Salem</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[San Carlos]</UName>
+
+<Caption>San Carlos</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[San Diego]</UName>
+
+<Caption>San Diego</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[San Francisco]</UName>
+
+<Caption>San Francisco</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[San Gabriel]</UName>
+
+<Caption>San Gabriel</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[San Jose]</UName>
+
+<Caption>San Jose</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Santa Cruz]</UName>
+
+<Caption>Santa Cruz</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Santa Monica]</UName>
+
+<Caption>Santa Monica</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Seattle]</UName>
+
+<Caption>Seattle</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Sedro Woolley]</UName>
+
+<Caption>Sedro Woolley</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Spokane]</UName>
+
+<Caption>Spokane</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Spring Valley]</UName>
+
+<Caption>Spring Valley</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Tacoma]</UName>
+
+<Caption>Tacoma</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Torrance]</UName>
+
+<Caption>Torrance</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[W. Linn]</UName>
+
+<Caption>W. Linn</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Walla Walla]</UName>
+
+<Caption>Walla Walla</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[West Covina]</UName>
+
+<Caption>West Covina</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Woodburn]</UName>
+
+<Caption>Woodburn</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Woodland Hills]</UName>
+
+<Caption>Woodland Hills</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+<Tuple>
+
+<Member Hierarchy="cust">
+
+<UName>[cust].[Allcusts].[USA].[Yakima]</UName>
+
+<Caption>Yakima</Caption>
+
+<LName>[cust].[city]</LName>
+
+<LNum>2</LNum>
+
+<DisplayInfo>10472</DisplayInfo>
+
+</Member>
+
+<Member Hierarchy="store">
+
+<UName>[store].[All stores]</UName>
+
+<Caption>All stores</Caption>
+
+<LName>[store].[(All)]</LName>
+
+<LNum>0</LNum>
+
+<DisplayInfo>3</DisplayInfo>
+
+</Member>
+
+</Tuple>
+
+</Tuples>
+
+</Axis>
+
+<Axis name="SlicerAxis">
+
+<Tuples>
+
+<Tuple>
+
+</Tuple>
+
+</Tuples>
+
+</Axis>
+
+</Axes>
+
+<CellData>
+
+<Cell CellOrdinal="19">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="20">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="21">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="22">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="23">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="24">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="25">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="26">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="27">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="28">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="29">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="30">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="31">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="32">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="33">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="34">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="35">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="36">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="37">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="38">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="39">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="40">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="41">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="42">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="43">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="44">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="45">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="46">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="47">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="48">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="49">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="50">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="51">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="52">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="53">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="54">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="55">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="56">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="57">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="58">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="59">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="60">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="61">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="62">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="63">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="64">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="65">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="66">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="67">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="68">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="69">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="70">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="71">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="72">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="73">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="74">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="75">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="76">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="77">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="78">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="79">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="80">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="81">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="82">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="83">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="84">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="85">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="86">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="87">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="88">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="89">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="90">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="91">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="92">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="93">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="94">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="95">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="96">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="97">
+
+<Value xsi:type="xsd:double">225627.233600</Value>
+
+<FmtValue>225,627.23</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="215">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="216">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="217">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="218">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="219">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="220">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="221">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="222">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="223">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="224">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="225">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="226">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="227">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="228">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="229">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="230">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="231">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="232">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="233">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="234">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="235">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="236">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="237">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="238">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="239">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="240">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="241">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="242">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="243">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="244">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="245">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="246">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="247">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="248">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="249">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="250">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="251">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="252">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="253">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="254">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="255">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="256">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="257">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="258">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="259">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="260">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="261">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="262">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="263">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="264">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="265">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="266">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="267">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="268">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="269">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="270">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="271">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="272">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="273">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="274">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="275">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="276">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="277">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="278">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="279">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="280">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="281">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="282">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="283">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="284">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="285">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="286">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="287">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="288">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="289">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="290">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="291">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="292">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="293">
+
+<Value xsi:type="xsd:double">565238.130000</Value>
+
+<FmtValue>565,238.13</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="411">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="412">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="413">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="414">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="415">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="416">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="417">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="418">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="419">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="420">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="421">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="422">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="423">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="424">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="425">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="426">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="427">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="428">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="429">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="430">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="431">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="432">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="433">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="434">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="435">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="436">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="437">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="438">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="439">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="440">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="441">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="442">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="443">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="444">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="445">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="446">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="447">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="448">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="449">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="450">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="451">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="452">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="453">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="454">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="455">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="456">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="457">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="458">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="459">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="460">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="461">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="462">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="463">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="464">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="465">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="466">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="467">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="468">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="469">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="470">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="471">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="472">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="473">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="474">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="475">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="476">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="477">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="478">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="479">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="480">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="481">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="482">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="483">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="484">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="485">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="486">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="487">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="488">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+<Cell CellOrdinal="489">
+
+<Value xsi:type="xsd:double">266773.000000</Value>
+
+<FmtValue>266,773.00</FmtValue>
+
+</Cell>
+
+</CellData>
+
+</root>
+
+</ns1:return>
+
+</ns1:ExecuteResponse>
+
+</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>
+
+0
+
+
+
+

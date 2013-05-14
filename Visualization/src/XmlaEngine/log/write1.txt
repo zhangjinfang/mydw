@@ -1,0 +1,51 @@
+send:
+================================================================================
+HTTP/1.1 200 OK
+
+Server: Microsoft-IIS/5.1
+
+Date: Tue, 26 Dec 2006 12:13:11 GMT
+
+Content-Type: text/xml
+
+charset: "utf-8"
+
+Transfer-encoding: chunked
+
+
+
+210
+
+<?xml version="1.0" encoding="gb2312"?>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+
+<SOAP-ENV:Body>
+
+<ns1:preComputeResponse xmlns:ns1="http://localhost/preCompute/">
+
+<ns1:return xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<root xmlns="http://localhost/preCompute/">
+
+<PreCmptRetFlag>
+
+SUCCESS: PreComputation is complete !
+
+</PreCmptRetFlag>
+
+</root>
+
+</ns1:return>
+
+</ns1:preComputeResponse>
+
+</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>
+
+0
+
+
+
+

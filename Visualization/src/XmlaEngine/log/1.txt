@@ -1,0 +1,80 @@
+show the ParsedMDX.......
+schema name is:test
+cube name is:mySales
+show one of the Axes:
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[Measures].[store_sales]
+                the member's value is:store_sales
+                the member's level is:MeasuresLevel
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+show one of the Axes:
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts]
+                the member's value is:Allcusts
+                the member's level is:conttry
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+show one of the QueryTuples in the slicer:
+         show the members in this QueryTuple: 
+            the member is:[time.time].[1997]
+                the member's value is:1997
+                the member's level is:year
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+INFO: class AggFileReader--Constructor
+time.time.year
+time.time.month
+time.time.id
+cust.cust.conttry
+cust.cust.city
+cust.cust.id
+store.store.contry
+store.store.city
+store.store.id
+Measures.Measures.store_sales
+Measures.Measures.store_cost
+Measures.Measures.unit_sales
+INFO: class MolapCCInvertListQuery--Execute query
+INFO: class MolapCCInvertListQuery--getQueryPoints
+INFO: getCartesianProduct
+dim:Measures
+hier:Measures
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+INFO: getCartesianProduct
+time.time.year:1997
+INFO: class MolapCCInvertListQuery--execute point query
+0.33the query time:0.33
+mdx:SELECT {[Measures].[store_sales]} ON columns, {[cust].[Allcusts]} ON rows FROM mySales
+ResultSet is:
+0:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+serializeSchema time:0.04
+serializeOlapInfo time:0.05
+Axes0:0.05
+tuplei0:0.05
+End Axes0:0.05
+Axes1:0.05
+tuplei0:0.05
+End Axes1:0.05
+After Axis:0.05
+After slicerAxis:0.05
+serializeAxesTF time:0.05
+serializeCellData time:0.05

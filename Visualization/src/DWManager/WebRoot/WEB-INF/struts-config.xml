@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="LoginForm" type="data.web.form.LoginForm"></form-bean>
+		<form-bean name="CreateCubeForm"
+			type="data.web.form.CreateCubeForm">
+		</form-bean>
+		<form-bean name="AddDataSourceForm"
+			type="data.web.form.AddDataSourceForm">
+		</form-bean>
+		<form-bean name="SchemaXMLForm"
+			type="data.web.form.SchemaForm">
+		</form-bean>
+		<form-bean name="WriteXMLStringForm"
+			type="data.web.form.WriteXMLStringForm">
+		</form-bean>
+
+		<form-bean name="YuJiSuanForm"
+			type="data.web.form.PreComputionForm">
+		</form-bean>
+		<form-bean name="CreateSchemaForm"
+			type="data.web.form.CreateSchemaForm">
+		</form-bean>
+		<form-bean name="AddCubeForm" 
+		    type="data.web.form.AddCubeForm"></form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards>
+	<forward name="ToErrorPage" path="/ErrorPage1.jsp"></forward>
+        <forward name="ToAddCubeSuccessPage" path="/AddCubeSuccessPage.jsp"></forward>
+	</global-forwards>
+	<action-mappings>
+		<action attribute="LoginForm" path="/Login" input="/Login.jsp"
+			name="LoginForm" type="data.web.action.LoginAction" scope="request"
+			validate="false">
+			<forward name="LoginSucceed" path="/homepage.jsp" />
+			<forward name="LoginFaild" path="/Login.jsp" />
+		</action>
+		<action attribute="CreateCubeForm" path="/CreateCube"
+			input="/create.jsp" name="CreateCubeForm"
+			type="data.web.action.CreateCubeAction" scope="request"
+			validate="true">
+			<forward name="CreateCubeSucceed" path="/create.jsp" />
+			<forward name="CreateCubeFaild" path="/create.jsp" />
+		</action>
+		<action attribute="AddDataSourceForm" path="/connectToDataSource"
+			input="/connectToDataSource.jsp" name="AddDataSourceForm"
+			type="data.web.action.AddDataSourceAction" scope="request"
+			validate="false">
+
+			<forward name="AddDataSourceFailed" path="/connectToDataSource.jsp" />
+			<forward name="AddDataSourceSucceed" path="/table1.jsp" />
+		</action>
+
+
+		<action attribute="WriteXMLStringForm" input="/schemaXML.jsp"
+			name="WriteXMLStringForm" path="/WriteXMLString" scope="request"
+			type="data.web.action.WriteXMLStringAction" validate="true">
+			<forward name="ReleaseXMLSucceed"
+				path="/releaseXMLSucceed.jsp">
+			</forward>
+			<forward name="ReleaseXMLFailed"
+				path="/releaseXMLFailed.jsp">
+			</forward>
+		</action>
+
+		<action path="/yujisuanjsp" forward="/PreCompution.jsp"></action>
+		<action path="/yujisuanjsp1" forward="/PreCompution.jsp"></action>
+		<action path="/yujisuan"
+			type="data.web.action.PreComputionAction" name="YuJiSuanForm">
+			<forward name="ToSuccessPage" path="/success.jsp"></forward>
+		</action>
+		<action path="/createschema"
+			type="data.web.action.CreateSchemaAction" name="CreateSchemaForm">
+			<forward name="CreateSchemaSucceed"
+				path="/addSchemaSucceed.jsp">
+			</forward>
+		</action>
+        <action path="/addcube" 
+            type="data.web.action.AddCubeAction" name="AddCubeForm">
+        </action>
+        <action path="/addcubejsp" forward="/addcube.jsp"></action>
+	</action-mappings>
+	<message-resources parameter="data.ApplicationResources_cn" />
+
+</struts-config>

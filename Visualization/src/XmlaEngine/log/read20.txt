@@ -1,0 +1,3 @@
+Read:0
+================================================================================
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><Discover xmlns="urn:schemas-microsoft-com:xml-analysis"><RequestType>MDSCHEMA_MEMBERS</RequestType><Restrictions><RestrictionList><HIERARCHY_UNIQUE_NAME>[Measures]</HIERARCHY_UNIQUE_NAME><LEVEL_UNIQUE_NAME>[Measures].[MeasuresLevel]</LEVEL_UNIQUE_NAME><CUBE_NAME>mySales</CUBE_NAME><CATALOG_NAME>test</CATALOG_NAME></RestrictionList></Restrictions><Properties><PropertyList><Catalog>test</Catalog><Content>SchemaData</Content><DataSourceInfo>Local Analysis Server</DataSourceInfo></PropertyList></Properties></Discover></SOAP-ENV:Body></SOAP-ENV:Envelope>

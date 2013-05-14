@@ -1,0 +1,217 @@
+send:
+================================================================================
+HTTP/1.1 200 OK
+
+Server: Microsoft-IIS/5.1
+
+Date: Tue, 26 Dec 2006 12:13:11 GMT
+
+Content-Type: text/xml
+
+charset: "utf-8"
+
+Transfer-encoding: chunked
+
+
+
+156a
+
+<?xml version="1.0" encoding="gb2312"?>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+
+<SOAP-ENV:Body>
+
+<ns1:DiscoverResponse xmlns:ns1="urn:schemas-microsoft-com:xml-analysis">
+
+<ns1:return xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset">
+
+<xsd:schema xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sql="urn:schemas-microsoft-com:xml-sql" elementFormDefault="qualified">
+
+<xsd:element name="root">
+
+<xsd:complexType>
+
+<xsd:sequence>
+
+<xsd:element name="row" type="row" minOccurs="0" maxOccurs="unbounded"/></xsd:sequence></xsd:complexType></xsd:element>
+
+<xsd:simpleType name="uuid">
+
+<xsd:restriction base="xsd:string">
+
+<xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/></xsd:restriction></xsd:simpleType>
+
+<xsd:complexType name="row">
+
+<xsd:sequence>
+
+<xsd:element name="CATALOG_NAME" type="xsd:string" sql:field="CATALOG_NAME" minOccurs="0"/>
+
+<xsd:element name="SCHEMA_NAME" type="xsd:string" sql:field="SCHEMA_NAME" minOccurs="0"/>
+
+<xsd:element name="CUBE_NAME" type="xsd:string" sql:field="CUBE_NAME" minOccurs="0"/>
+
+<xsd:element name="DIMENSION_UNIQUE_NAME" type="xsd:string" sql:field="DIMENSION_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="HIERARCHY_UNIQUE_NAME" type="xsd:string" sql:field="HIERARCHY_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="LEVEL_UNIQUE_NAME" type="xsd:string" sql:field="LEVEL_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="LEVEL_NUMBER" type="xsd:unsignedInt" sql:field="LEVEL_NUMBER"/>
+
+<xsd:element name="MEMBER_ORDINAL" type="xsd:unsignedInt" sql:field="MEMBER_ORDINAL"/>
+
+<xsd:element name="MEMBER_NAME" type="xsd:string" sql:field="MEMBER_NAME" minOccurs="0"/>
+
+<xsd:element name="MEMBER_UNIQUE_NAME" type="xsd:string" sql:field="MEMBER_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="MEMBER_TYPE" type="xsd:int" sql:field="MEMBER_TYPE"/>
+
+<xsd:element name="MEMBER_GUID" type="uuid" sql:field="MEMBER_GUID" minOccurs="0"/>
+
+<xsd:element name="MEMBER_CAPTION" type="xsd:string" sql:field="MEMBER_CAPTION" minOccurs="0"/>
+
+<xsd:element name="CHILDREN_CARDINALITY" type="xsd:unsignedInt" sql:field="CHILDREN_CARDINALITY"/>
+
+<xsd:element name="PARENT_LEVEL" type="xsd:unsignedInt" sql:field="PARENT_LEVEL"/>
+
+<xsd:element name="PARENT_UNIQUE_NAME" type="xsd:string" sql:field="PARENT_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="PARENT_COUNT" type="xsd:unsignedInt" sql:field="PARENT_COUNT"/>
+
+<xsd:element name="DESCRIPTION" type="xsd:string" sql:field="DESCRIPTION" minOccurs="0"/>
+
+<xsd:element name="EXPRESSION" type="xsd:string" sql:field="EXPRESSION" minOccurs="0"/>
+
+<xsd:element name="MEMBER_KEY" type="xsd:string" sql:field="MEMBER_KEY" minOccurs="0"/>
+
+<xsd:element name="IS_PLACEHOLDERMEMBER" type="xsd:boolean" sql:field="IS_PLACEHOLDERMEMBER" minOccurs="0"/>
+
+<xsd:element name="IS_DATAMEMBER" type="xsd:boolean" sql:field="IS_DATAMEMBER" minOccurs="0"/></xsd:sequence></xsd:complexType></xsd:schema>
+
+<row>
+
+<CATALOG_NAME>test</CATALOG_NAME>
+
+<CUBE_NAME>mySales</CUBE_NAME>
+
+<DIMENSION_UNIQUE_NAME>[Measures]</DIMENSION_UNIQUE_NAME>
+
+<HIERARCHY_UNIQUE_NAME>[Measures]</HIERARCHY_UNIQUE_NAME>
+
+<LEVEL_UNIQUE_NAME>[Measures].[MeasuresLevel]</LEVEL_UNIQUE_NAME>
+
+<LEVEL_NUMBER>0</LEVEL_NUMBER>
+
+<MEMBER_ORDINAL>0</MEMBER_ORDINAL>
+
+<MEMBER_NAME>store_sales</MEMBER_NAME>
+
+<MEMBER_UNIQUE_NAME>[Measures].[store_sales]</MEMBER_UNIQUE_NAME>
+
+<MEMBER_TYPE>3</MEMBER_TYPE>
+
+<MEMBER_CAPTION>store_sales</MEMBER_CAPTION>
+
+<CHILDREN_CARDINALITY>0</CHILDREN_CARDINALITY>
+
+<PARENT_LEVEL>0</PARENT_LEVEL>
+
+<PARENT_COUNT>0</PARENT_COUNT>
+
+<IS_PLACEHOLDERMEMBER>false</IS_PLACEHOLDERMEMBER>
+
+<IS_DATAMEMBER>false</IS_DATAMEMBER>
+
+</row>
+
+<row>
+
+<CATALOG_NAME>test</CATALOG_NAME>
+
+<CUBE_NAME>mySales</CUBE_NAME>
+
+<DIMENSION_UNIQUE_NAME>[Measures]</DIMENSION_UNIQUE_NAME>
+
+<HIERARCHY_UNIQUE_NAME>[Measures]</HIERARCHY_UNIQUE_NAME>
+
+<LEVEL_UNIQUE_NAME>[Measures].[MeasuresLevel]</LEVEL_UNIQUE_NAME>
+
+<LEVEL_NUMBER>0</LEVEL_NUMBER>
+
+<MEMBER_ORDINAL>1</MEMBER_ORDINAL>
+
+<MEMBER_NAME>store_cost</MEMBER_NAME>
+
+<MEMBER_UNIQUE_NAME>[Measures].[store_cost]</MEMBER_UNIQUE_NAME>
+
+<MEMBER_TYPE>3</MEMBER_TYPE>
+
+<MEMBER_CAPTION>store_cost</MEMBER_CAPTION>
+
+<CHILDREN_CARDINALITY>0</CHILDREN_CARDINALITY>
+
+<PARENT_LEVEL>0</PARENT_LEVEL>
+
+<PARENT_COUNT>0</PARENT_COUNT>
+
+<IS_PLACEHOLDERMEMBER>false</IS_PLACEHOLDERMEMBER>
+
+<IS_DATAMEMBER>false</IS_DATAMEMBER>
+
+</row>
+
+<row>
+
+<CATALOG_NAME>test</CATALOG_NAME>
+
+<CUBE_NAME>mySales</CUBE_NAME>
+
+<DIMENSION_UNIQUE_NAME>[Measures]</DIMENSION_UNIQUE_NAME>
+
+<HIERARCHY_UNIQUE_NAME>[Measures]</HIERARCHY_UNIQUE_NAME>
+
+<LEVEL_UNIQUE_NAME>[Measures].[MeasuresLevel]</LEVEL_UNIQUE_NAME>
+
+<LEVEL_NUMBER>0</LEVEL_NUMBER>
+
+<MEMBER_ORDINAL>2</MEMBER_ORDINAL>
+
+<MEMBER_NAME>unit_sales</MEMBER_NAME>
+
+<MEMBER_UNIQUE_NAME>[Measures].[unit_sales]</MEMBER_UNIQUE_NAME>
+
+<MEMBER_TYPE>3</MEMBER_TYPE>
+
+<MEMBER_CAPTION>unit_sales</MEMBER_CAPTION>
+
+<CHILDREN_CARDINALITY>0</CHILDREN_CARDINALITY>
+
+<PARENT_LEVEL>0</PARENT_LEVEL>
+
+<PARENT_COUNT>0</PARENT_COUNT>
+
+<IS_PLACEHOLDERMEMBER>false</IS_PLACEHOLDERMEMBER>
+
+<IS_DATAMEMBER>false</IS_DATAMEMBER>
+
+</row>
+
+</root>
+
+</ns1:return>
+
+</ns1:DiscoverResponse>
+
+</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>
+
+0
+
+
+
+

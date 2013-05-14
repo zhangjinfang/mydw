@@ -1,0 +1,10 @@
+数据仓库服务
+   华新数据仓库服务http://localhost:8080/DWManager2/huanxinmain.jsp
+                    http://localhost:8080/DWManager2/foodmartmain.jsp
+       数据传输http://localhost:8080/DWManager2/datafileupload.jsp
+       预计算http://localhost:8080/DWManager2/huanxinpreComputation.jsp?schemaName=sales
+       查询http://localhost:8080/DWManager2/huaxinquery.jsp?schemaName=FoodMart2000
+       
+       
+  数据仓库服务http://localhost:8080/DWManager2/foodmartmain.jsp?schemaName=FoodMart2000
+       添加模式：http://localhost:8080/DWManager2/newSchema.jsp

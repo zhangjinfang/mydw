@@ -1,0 +1,32 @@
+<xsd:schema xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sql="urn:schemas-microsoft-com:xml-sql" elementFormDefault="qualified">
+<xsd:element name="root">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="row" type="row" minOccurs="0" maxOccurs="unbounded"/></xsd:sequence></xsd:complexType></xsd:element>
+<xsd:simpleType name="uuid">
+<xsd:restriction base="xsd:string">
+<xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/></xsd:restriction></xsd:simpleType>
+<xsd:complexType name="row">
+<xsd:sequence>
+<xsd:element name="CATALOG_NAME" type="xsd:string" sql:field="CATALOG_NAME" minOccurs="0"/>
+<xsd:element name="SCHEMA_NAME" type="xsd:string" sql:field="SCHEMA_NAME" minOccurs="0"/>
+<xsd:element name="CUBE_NAME" type="xsd:string" sql:field="CUBE_NAME" minOccurs="0"/>
+<xsd:element name="DIMENSION_UNIQUE_NAME" type="xsd:string" sql:field="DIMENSION_UNIQUE_NAME" minOccurs="0"/>
+<xsd:element name="HIERARCHY_UNIQUE_NAME" type="xsd:string" sql:field="HIERARCHY_UNIQUE_NAME" minOccurs="0"/>
+<xsd:element name="LEVEL_NAME" type="xsd:string" sql:field="LEVEL_NAME" minOccurs="0"/>
+<xsd:element name="LEVEL_UNIQUE_NAME" type="xsd:string" sql:field="LEVEL_UNIQUE_NAME" minOccurs="0"/>
+<xsd:element name="LEVEL_GUID" type="uuid" sql:field="LEVEL_GUID" minOccurs="0"/>
+<xsd:element name="LEVEL_CAPTION" type="xsd:string" sql:field="LEVEL_CAPTION" minOccurs="0"/>
+<xsd:element name="LEVEL_NUMBER" type="xsd:unsignedInt" sql:field="LEVEL_NUMBER"/>
+<xsd:element name="LEVEL_CARDINALITY" type="xsd:unsignedInt" sql:field="LEVEL_CARDINALITY"/>
+<xsd:element name="LEVEL_TYPE" type="xsd:int" sql:field="LEVEL_TYPE"/>
+<xsd:element name="DESCRIPTION" type="xsd:string" sql:field="DESCRIPTION" minOccurs="0"/>
+<xsd:element name="CUSTOM_ROLLUP_SETTINGS" type="xsd:int" sql:field="CUSTOM_ROLLUP_SETTINGS"/>
+<xsd:element name="LEVEL_UNIQUE_SETTINGS" type="xsd:int" sql:field="LEVEL_UNIQUE_SETTINGS"/>
+<xsd:element name="LEVEL_IS_VISIBLE" type="xsd:boolean" sql:field="LEVEL_IS_VISIBLE"/>
+<xsd:element name="LEVEL_ORDERING_PROPERTY" type="xsd:string" sql:field="LEVEL_ORDERING_PROPERTY" minOccurs="0"/>
+<xsd:element name="LEVEL_DBTYPE" type="xsd:int" sql:field="LEVEL_DBTYPE"/>
+<xsd:element name="LEVEL_MASTER_UNIQUE_NAME" type="xsd:string" sql:field="LEVEL_MASTER_UNIQUE_NAME" minOccurs="0"/>
+<xsd:element name="LEVEL_NAME_SQL_COLUMN_NAME" type="xsd:string" sql:field="LEVEL_NAME_SQL_COLUMN_NAME" minOccurs="0"/>
+<xsd:element name="LEVEL_KEY_SQL_COLUMN_NAME" type="xsd:string" sql:field="LEVEL_KEY_SQL_COLUMN_NAME" minOccurs="0"/>
+<xsd:element name="LEVEL_UNIQUE_NAME_SQL_COLUMN_NAME" type="xsd:string" sql:field="LEVEL_UNIQUE_NAME_SQL_COLUMN_NAME" minOccurs="0"/></xsd:sequence></xsd:complexType></xsd:schema>

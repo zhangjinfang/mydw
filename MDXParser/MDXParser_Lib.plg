@@ -1,0 +1,65 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MDXParser_Lib - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPEBCB.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "../include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/MDXParser_Lib.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\昆工\git\mydw\MDXParser\calcMemFormat.cpp"
+"F:\昆工\git\mydw\MDXParser\calculatedMember.cpp"
+"F:\昆工\git\mydw\MDXParser\FunParam.cpp"
+"F:\昆工\git\mydw\MDXParser\lex.cpp"
+"F:\昆工\git\mydw\MDXParser\main.cpp"
+"F:\昆工\git\mydw\MDXParser\MemberFunFactory.cpp"
+"F:\昆工\git\mydw\MDXParser\ParsedMDX.cpp"
+"F:\昆工\git\mydw\MDXParser\QueryMember.cpp"
+"F:\昆工\git\mydw\MDXParser\QueryTuple.cpp"
+"F:\昆工\git\mydw\MDXParser\SetFunFactory.cpp"
+"F:\昆工\git\mydw\MDXParser\SymTab.cpp"
+"F:\昆工\git\mydw\MDXParser\SyntTree.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPEBCB.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPEBDB.tmp" with contents
+[
+/nologo /out:"..\lib\MDXParser_Lib.lib" 
+".\Debug\calcMemFormat.obj"
+".\Debug\calculatedMember.obj"
+".\Debug\FunParam.obj"
+".\Debug\lex.obj"
+".\Debug\main.obj"
+".\Debug\MemberFunFactory.obj"
+".\Debug\ParsedMDX.obj"
+".\Debug\QueryMember.obj"
+".\Debug\QueryTuple.obj"
+".\Debug\SetFunFactory.obj"
+".\Debug\SymTab.obj"
+".\Debug\SyntTree.obj"
+]
+Creating command line "link.exe -lib @C:\Users\ADMINI~1\AppData\Local\Temp\RSPEBDB.tmp"
+<h3>Output Window</h3>
+Compiling...
+calcMemFormat.cpp
+calculatedMember.cpp
+FunParam.cpp
+lex.cpp
+main.cpp
+MemberFunFactory.cpp
+ParsedMDX.cpp
+QueryMember.cpp
+QueryTuple.cpp
+SetFunFactory.cpp
+SymTab.cpp
+SyntTree.cpp
+Creating library...
+
+
+
+<h3>Results</h3>
+MDXParser_Lib.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

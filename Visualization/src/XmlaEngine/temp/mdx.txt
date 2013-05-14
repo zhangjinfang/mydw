@@ -1,0 +1,1 @@
+SELECT {[Measures].[store_sales], [Measures].[store_cost], [Measures].[unit_sales]} ON columns, Hierarchize(Union(Union({[cust].[Allcusts]}, [cust].[Allcusts].[Mexico].Children), [cust].[Allcusts].[USA].Children)) ON rows FROM mySales WHERE ([time].[1997])

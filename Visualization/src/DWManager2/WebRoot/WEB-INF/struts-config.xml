@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="loginForm" type="com.scut24lab.struts.form.LoginForm" />
+    <form-bean name="saveDSForm" type="com.scut24lab.struts.form.SaveDSForm" />
+    <form-bean name="preComputeForm" type="com.scut24lab.struts.form.PreComputeForm" />
+    <form-bean name="addSchemaForm" type="com.scut24lab.struts.form.AddSchemaForm" />
+    <form-bean name="delSchemaForm" type="com.scut24lab.struts.form.DelSchemaForm" />
+    <form-bean name="addTermForm" type="com.scut24lab.struts.form.AddTermForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards >
+  </global-forwards>
+
+  <action-mappings >
+    <action
+      attribute="loginForm"
+      input="/Login.jsp"
+      name="loginForm"
+      path="/login"
+      scope="request"
+      type="com.scut24lab.struts.action.LoginAction"
+      validate="false">
+      <forward name="failure" path="/Login.jsp" />
+      <forward name="success" path="/main.jsp" />
+    </action>
+    <action
+      attribute="saveDSForm"
+      input="/editDS.jsp"
+      name="saveDSForm"
+      path="/saveDS"
+      scope="request"
+      type="com.scut24lab.struts.action.SaveDSAction" >
+      
+      <forward name="SaveFailure" path="/error.jsp" />
+      <forward name="SaveSuccess" path="/SaveDSSuccess.jsp" />
+    </action>
+    <action
+      attribute="preComputeForm"
+      input="/preComputation.jsp"
+      name="preComputeForm"
+      path="/preCompute"
+      scope="request"
+      type="com.scut24lab.struts.action.PreComputeAction" >
+      <forward name="PreComSuccess" path="/preComputeSuccess.jsp" />
+      <forward name="PreComFailure" path="/error.jsp" />
+    </action>
+    <action
+      attribute="addSchemaForm"
+      input="/newSchema.jsp"
+      name="addSchemaForm"
+      path="/addSchema"
+      scope="request"
+      type="com.scut24lab.struts.action.AddSchemaAction">
+      <forward name="addSchemaSuccess" path="/addSchemaSucceed.jsp" />
+      <forward name="addSchemaFailure" path="/error.jsp" />
+    </action>
+    <action
+      attribute="delSchemaForm"
+      input="/delSchema.jsp"
+      name="delSchemaForm"
+      path="/delSchema"
+      scope="request"
+      type="com.scut24lab.struts.action.DelSchemaAction">
+      <forward name="delSchemaSuccess" path="/delSchemaSuccess.jsp" />
+      <forward name="delSchemaFailure" path="/error.jsp" />
+    </action>
+    <action
+      attribute="addTermForm"
+      input="/klextract.jsp"
+      name="addTermForm"
+      path="/addTerm"
+      scope="request"
+      type="com.scut24lab.struts.action.AddTermAction">
+      <forward name="failure" path="/studyfail.jsp" />
+      <forward name="success" path="/studyresult.jsp" />
+    </action>
+  </action-mappings>
+
+  <message-resources parameter="com.scut24lab.struts.ApplicationResources" />
+</struts-config>
+

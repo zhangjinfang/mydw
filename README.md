@@ -1,4 +1,0 @@
-mydw
-====
-
-my data warehousing

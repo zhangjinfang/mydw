@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312"?>
+<wtb>
+    <wtbroot name="数据仓库服务" urlbase="http://localhost:8080/DWManager2/">
+	
+	<wtbcc name="数据传输" url="datafileupload.jsp"/>
+	<wtbcc name="预计算" url="huanxinpreComputation.jsp?schemaName=sales"/>
+	<wtbcc name="查询" url="huaxinquery.jsp?schemaName=sales"/>
+	</wtbroot>
+</wtb>

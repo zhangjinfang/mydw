@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!--2007-11-1-->
+<Schema name="OLAP_TestDB">
+ <DataSource url="OLAP_TestDB" userName="smq" passWord="smq"/>
+<Cube name="WZ">
+  <Table name="WZ"/> 
+ <Dimension name="WZDD1" foreignKey="wzsxh"> 
+  <Hierarchy name="WZDD1"  hasAll="true" allMemberName="all WZZD1" primaryKey="wzsxh">
+  <Table name="WZ" /> 
+  <Level name="WZDD1" column="WZDD1" uniqueMembers="true" /> 
+  </Hierarchy>
+ </Dimension>
+ <Dimension name="Time" foreignKey="WZSJ">
+  <Hierarchy name="Time"  hasAll="true" allMemberName="all Time" primaryKey="WZSJ">
+  <Table name="ga_time" /> 
+       <Level name="Year" column="year" uniqueMembers="true"/>
+      <Level name="Month" column="month" uniqueMembers="true"/>
+      <Level name="day" column="day" uniqueMembers="true"/> 
+  </Hierarchy>
+ </Dimension>
+ <Dimension name="WZXWDM" foreignKey="WZSXH">
+  <Hierarchy name="WZXWDM"  hasAll="true" allMemberName="all WZXWDM" primaryKey="WZSXH">
+  <Table name="WZ" /> 
+  <Level name="WZXWDM name" column="WZXWDM" uniqueMembers="true" /> 
+  </Hierarchy>
+ </Dimension> 
+
+ <Measure name="freq" column="HPHM" aggregator="count"
+      formatString="#,###"/>
+
+</Cube>
+</Schema>

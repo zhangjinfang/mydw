@@ -1,0 +1,227 @@
+show the ParsedMDX.......
+schema name is:test
+cube name is:mySales
+show one of the Axes:
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[Measures].[store_sales]
+                the member's value is:store_sales
+                the member's level is:MeasuresLevel
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+            the member is:[time.time].[1997]
+                the member's value is:1997
+                the member's level is:year
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[Measures].[store_sales]
+                the member's value is:store_sales
+                the member's level is:MeasuresLevel
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+            the member is:[time.time].[1998]
+                the member's value is:1998
+                the member's level is:year
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+show one of the Axes:
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts]
+                the member's value is:Allcusts
+                the member's level is:conttry
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Canada]
+                the member's value is:Canada
+                the member's level is:conttry
+                the member's ancestorVals:{Allcusts}
+                the member's ancestorLevels:{(All)}
+                isAll:0
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico]
+                the member's value is:Mexico
+                the member's level is:conttry
+                the member's ancestorVals:{Allcusts}
+                the member's ancestorLevels:{(All)}
+                isAll:0
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA]
+                the member's value is:USA
+                the member's level is:conttry
+                the member's ancestorVals:{Allcusts}
+                the member's ancestorLevels:{(All)}
+                isAll:0
+            the member is:[store.store].[All stores]
+                the member's value is:All stores
+                the member's level is:(All)
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:1
+show one of the QueryTuples in the slicer:
+         show the members in this QueryTuple: 
+INFO: class AggFileReader--Constructor
+time.time.year
+time.time.month
+time.time.id
+cust.cust.conttry
+cust.cust.city
+cust.cust.id
+store.store.contry
+store.store.city
+store.store.id
+Measures.Measures.store_sales
+Measures.Measures.store_cost
+Measures.Measures.unit_sales
+INFO: class MolapCCInvertListQuery--Execute query
+INFO: class MolapCCInvertListQuery--getQueryPoints
+INFO: getCartesianProduct
+dim:Measures
+hier:Measures
+dim:time
+hier:time
+time.time.year:1997
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Canada
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:Measures
+hier:Measures
+dim:time
+hier:time
+time.time.year:1998
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Canada
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+dim:store
+hier:store
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+dim:store
+hier:store
+INFO: getCartesianProduct
+INFO: class MolapCCInvertListQuery--execute point query
+0.331the query time:0.331
+mdx:SELECT CrossJoin({[Measures].[store_sales]}, {[time].[1997], [time].[1998]}) ON columns, CrossJoin(Hierarchize(Union({[cust].[Allcusts]}, [cust].[Allcusts].Children)), {[store].[All stores]}) ON rows FROM mySales
+ResultSet is:
+0:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+1:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+2:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+3:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+4:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+5:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+6:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+7:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+serializeSchema time:0.02
+serializeOlapInfo time:0.02
+Axes0:0.02
+tuplei0:0.02
+tuplei1:0.02
+End Axes0:0.02
+Axes1:0.02
+tuplei0:0.02
+tuplei1:2.543
+tuplei2:2.543
+tuplei3:2.543
+End Axes1:2.543
+After Axis:2.543
+After slicerAxis:2.543
+serializeAxesTF time:2.543
+serializeCellData time:2.543

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<Config>
+	<OLAP_TestDB>
+		<WZ>
+			<Alg>MolapMTPDPreComputation</Alg>
+		</WZ>
+	</OLAP_TestDB>
+	<FoodMart2000>
+	    <Sales>
+ 	        <Alg>MolapMTPDPreComputation</Alg>
+    	    </Sales>
+	</FoodMart2000>
+	<sales>
+	    <Sales>
+		<Alg>MolapCCPreComputation</Alg>
+	    </Sales>
+	</sales>
+</Config>

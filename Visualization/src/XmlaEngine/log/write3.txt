@@ -1,0 +1,219 @@
+send:
+================================================================================
+HTTP/1.1 200 OK
+
+Server: Microsoft-IIS/5.1
+
+Date: Tue, 26 Dec 2006 12:13:11 GMT
+
+Content-Type: text/xml
+
+charset: "utf-8"
+
+Transfer-encoding: chunked
+
+
+
+1454
+
+<?xml version="1.0" encoding="gb2312"?>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+
+<SOAP-ENV:Body>
+
+<ns1:DiscoverResponse xmlns:ns1="urn:schemas-microsoft-com:xml-analysis">
+
+<ns1:return xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset">
+
+<xsd:schema xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sql="urn:schemas-microsoft-com:xml-sql" elementFormDefault="qualified">
+
+<xsd:element name="root">
+
+<xsd:complexType>
+
+<xsd:sequence>
+
+<xsd:element name="row" type="row" minOccurs="0" maxOccurs="unbounded"/></xsd:sequence></xsd:complexType></xsd:element>
+
+<xsd:simpleType name="uuid">
+
+<xsd:restriction base="xsd:string">
+
+<xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/></xsd:restriction></xsd:simpleType>
+
+<xsd:complexType name="row">
+
+<xsd:sequence>
+
+<xsd:element name="CATALOG_NAME" type="xsd:string" sql:field="CATALOG_NAME" minOccurs="0"/>
+
+<xsd:element name="SCHEMA_NAME" type="xsd:string" sql:field="SCHEMA_NAME" minOccurs="0"/>
+
+<xsd:element name="CUBE_NAME" type="xsd:string" sql:field="CUBE_NAME" minOccurs="0"/>
+
+<xsd:element name="DIMENSION_NAME" type="xsd:string" sql:field="DIMENSION_NAME" minOccurs="0"/>
+
+<xsd:element name="DIMENSION_UNIQUE_NAME" type="xsd:string" sql:field="DIMENSION_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="DIMENSION_GUID" type="uuid" sql:field="DIMENSION_GUID" minOccurs="0"/>
+
+<xsd:element name="DIMENSION_CAPTION" type="xsd:string" sql:field="DIMENSION_CAPTION" minOccurs="0"/>
+
+<xsd:element name="DIMENSION_ORDINAL" type="xsd:unsignedInt" sql:field="DIMENSION_ORDINAL"/>
+
+<xsd:element name="DIMENSION_TYPE" type="xsd:short" sql:field="DIMENSION_TYPE"/>
+
+<xsd:element name="DIMENSION_CARDINALITY" type="xsd:unsignedInt" sql:field="DIMENSION_CARDINALITY"/>
+
+<xsd:element name="DEFAULT_HIERARCHY" type="xsd:string" sql:field="DEFAULT_HIERARCHY" minOccurs="0"/>
+
+<xsd:element name="DESCRIPTION" type="xsd:string" sql:field="DESCRIPTION" minOccurs="0"/>
+
+<xsd:element name="IS_VIRTUAL" type="xsd:boolean" sql:field="IS_VIRTUAL"/>
+
+<xsd:element name="IS_READWRITE" type="xsd:boolean" sql:field="IS_READWRITE"/>
+
+<xsd:element name="DIMENSION_UNIQUE_SETTINGS" type="xsd:int" sql:field="DIMENSION_UNIQUE_SETTINGS"/>
+
+<xsd:element name="DIMENSION_MASTER_UNIQUE_NAME" type="xsd:string" sql:field="DIMENSION_MASTER_UNIQUE_NAME" minOccurs="0"/>
+
+<xsd:element name="DIMENSION_IS_VISIBLE" type="xsd:boolean" sql:field="DIMENSION_IS_VISIBLE"/></xsd:sequence></xsd:complexType></xsd:schema>
+
+<row>
+
+<CATALOG_NAME>test</CATALOG_NAME>
+
+<CUBE_NAME>mySales</CUBE_NAME>
+
+<DIMENSION_NAME>Measures</DIMENSION_NAME>
+
+<DIMENSION_UNIQUE_NAME>[Measures]</DIMENSION_UNIQUE_NAME>
+
+<DIMENSION_CAPTION>Measures</DIMENSION_CAPTION>
+
+<DIMENSION_ORDINAL>3</DIMENSION_ORDINAL>
+
+<DIMENSION_TYPE>2</DIMENSION_TYPE>
+
+<DIMENSION_CARDINALITY>3</DIMENSION_CARDINALITY>
+
+<DEFAULT_HIERARCHY>[Measures]</DEFAULT_HIERARCHY>
+
+<IS_VIRTUAL>false</IS_VIRTUAL>
+
+<IS_READWRITE>false</IS_READWRITE>
+
+<DIMENSION_UNIQUE_SETTINGS>0</DIMENSION_UNIQUE_SETTINGS>
+
+<DIMENSION_IS_VISIBLE>true</DIMENSION_IS_VISIBLE>
+
+</row>
+
+<row>
+
+<CATALOG_NAME>test</CATALOG_NAME>
+
+<CUBE_NAME>mySales</CUBE_NAME>
+
+<DIMENSION_NAME>time</DIMENSION_NAME>
+
+<DIMENSION_UNIQUE_NAME>[time]</DIMENSION_UNIQUE_NAME>
+
+<DIMENSION_CAPTION>time</DIMENSION_CAPTION>
+
+<DIMENSION_ORDINAL>0</DIMENSION_ORDINAL>
+
+<DIMENSION_TYPE>1</DIMENSION_TYPE>
+
+<DIMENSION_CARDINALITY>1486</DIMENSION_CARDINALITY>
+
+<DEFAULT_HIERARCHY>[time]</DEFAULT_HIERARCHY>
+
+<IS_VIRTUAL>false</IS_VIRTUAL>
+
+<IS_READWRITE>false</IS_READWRITE>
+
+<DIMENSION_UNIQUE_SETTINGS>0</DIMENSION_UNIQUE_SETTINGS>
+
+<DIMENSION_IS_VISIBLE>true</DIMENSION_IS_VISIBLE>
+
+</row>
+
+<row>
+
+<CATALOG_NAME>test</CATALOG_NAME>
+
+<CUBE_NAME>mySales</CUBE_NAME>
+
+<DIMENSION_NAME>cust</DIMENSION_NAME>
+
+<DIMENSION_UNIQUE_NAME>[cust]</DIMENSION_UNIQUE_NAME>
+
+<DIMENSION_CAPTION>cust</DIMENSION_CAPTION>
+
+<DIMENSION_ORDINAL>1</DIMENSION_ORDINAL>
+
+<DIMENSION_TYPE>3</DIMENSION_TYPE>
+
+<DIMENSION_CARDINALITY>10585</DIMENSION_CARDINALITY>
+
+<DEFAULT_HIERARCHY>[cust]</DEFAULT_HIERARCHY>
+
+<IS_VIRTUAL>false</IS_VIRTUAL>
+
+<IS_READWRITE>false</IS_READWRITE>
+
+<DIMENSION_UNIQUE_SETTINGS>0</DIMENSION_UNIQUE_SETTINGS>
+
+<DIMENSION_IS_VISIBLE>true</DIMENSION_IS_VISIBLE>
+
+</row>
+
+<row>
+
+<CATALOG_NAME>test</CATALOG_NAME>
+
+<CUBE_NAME>mySales</CUBE_NAME>
+
+<DIMENSION_NAME>store</DIMENSION_NAME>
+
+<DIMENSION_UNIQUE_NAME>[store]</DIMENSION_UNIQUE_NAME>
+
+<DIMENSION_CAPTION>store</DIMENSION_CAPTION>
+
+<DIMENSION_ORDINAL>2</DIMENSION_ORDINAL>
+
+<DIMENSION_TYPE>3</DIMENSION_TYPE>
+
+<DIMENSION_CARDINALITY>53</DIMENSION_CARDINALITY>
+
+<DEFAULT_HIERARCHY>[store]</DEFAULT_HIERARCHY>
+
+<IS_VIRTUAL>false</IS_VIRTUAL>
+
+<IS_READWRITE>false</IS_READWRITE>
+
+<DIMENSION_UNIQUE_SETTINGS>0</DIMENSION_UNIQUE_SETTINGS>
+
+<DIMENSION_IS_VISIBLE>true</DIMENSION_IS_VISIBLE>
+
+</row>
+
+</root>
+
+</ns1:return>
+
+</ns1:DiscoverResponse>
+
+</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>
+
+0
+
+
+
+

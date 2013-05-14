@@ -1,0 +1,1 @@
+SELECT {[Measures].[freq]} ON columns, {[WZXWDM].[10380A], [WZXWDM].[1229]} ON rows FROM WZ WHERE [Time].[04]

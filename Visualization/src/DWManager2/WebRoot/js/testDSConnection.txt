@@ -1,0 +1,48 @@
+var xmlHttp;
+function createXMLHttpRequest() {
+    if (window.ActiveXObject) {
+        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else if (window.XMLHttpRequest) {
+        xmlHttp = new XMLHttpRequest();
+    }
+}
+
+function testDSConnection()
+{
+	createXMLHttpRequest();
+	//多页面中获得数据源的相关参数.
+	//空一行?不空一行url得到的数据是[object],空了就是正确的????
+	var url = document.getElementById("url").value;
+	var userName = document.getElementById("userName").value;
+	var passWord = document.getElementById("passWord").value;
+	var connString = document.getElementById("connString").value;
+	var connDriver = document.getElementById("connDriver").value;
+
+	//定义Session的内容.
+	var queryString = "";
+	queryString =queryString+"url="+url+"&userName="+userName+"&passWord="+escape(passWord)
+				 +"&connString="+connString+"&connDriver="+connDriver;	
+	
+	xmlHttp.onreadystatechange = handleStateChange;
+	xmlHttp.open("POST","testDSConnection.jsp",true);
+	xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+    xmlHttp.setRequestHeader ("Cache-Control","no-cache");
+	xmlHttp.send(queryString);
+
+}
+
+
+function handleStateChange(){
+	if(xmlHttp.readyState == 4)
+	{
+		if(xmlHttp.status == 200)
+		{	
+			//window.open("testConnection.jsp").document.write(xmlHttp.responseText);	//这样会在新的窗口中打页面
+			//testConnection.jsp,如果不想的话,可以这样:
+			//document.write(xmlHttp.responseText);
+			var result = document.getElementById("result");
+			result.innerHTML = xmlHttp.responseText;
+		}
+	}
+}

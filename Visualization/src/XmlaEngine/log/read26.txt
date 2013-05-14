@@ -1,0 +1,25 @@
+Read:0
+================================================================================
+POST / HTTP/1.1
+
+Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+SOAPAction: "urn:schemas-microsoft-com:xml-analysis:Execute"
+
+Content-Type: text/xml; charset=utf-8
+
+Content-Length: 1305
+
+Cache-Control: no-cache
+
+Pragma: no-cache
+
+User-Agent: Java/1.6.0_02
+
+Host: localhost:81
+
+Connection: keep-alive
+
+
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><Execute xmlns="urn:schemas-microsoft-com:xml-analysis"><Command><Statement>SELECT Hierarchize(Union(Union(Union(CrossJoin({[Measures].[store_sales]}, {[time].[1997]}), CrossJoin({[Measures].[store_sales]}, {[time].[1998]})), Union(Union(CrossJoin({[Measures].[store_cost]}, {[time].[1997]}), CrossJoin({[Measures].[store_cost]}, {[time].[1998]})), CrossJoin({[Measures].[store_cost]}, [time].[1997].Children))), Union(CrossJoin({[Measures].[unit_sales]}, {[time].[1997]}), CrossJoin({[Measures].[unit_sales]}, {[time].[1998]})))) ON columns, Hierarchize(Union(Union(Union(Union(CrossJoin({[cust].[Allcusts]}, {[store].[All stores]}), CrossJoin({[cust].[Allcusts]}, [store].[All stores].Children)), CrossJoin([cust].[Allcusts].Children, {[store].[All stores]})), CrossJoin([cust].[Allcusts].[Mexico].Children, {[store].[All stores]})), CrossJoin([cust].[Allcusts].[USA].Children, {[store].[All stores]}))) ON rows FROM mySales</Statement></Command><Properties><PropertyList><AxisFormat>TupleFormat</AxisFormat><Format>Multidimensional</Format><Catalog>test</Catalog><DataSourceInfo>Local Analysis Server</DataSourceInfo></PropertyList></Properties></Execute></SOAP-ENV:Body></SOAP-ENV:Envelope>

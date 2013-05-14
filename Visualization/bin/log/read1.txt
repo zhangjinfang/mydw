@@ -1,0 +1,25 @@
+Read:0
+================================================================================
+POST / HTTP/1.1
+
+SOAPAction: "urn:schemas-microsoft-com:xml-analysis:Discover"
+
+Content-Type: text/xml; charset="utf-8"
+
+Content-Length: 429
+
+Cache-Control: no-cache
+
+Pragma: no-cache
+
+User-Agent: Java/1.5.0_03
+
+Host: localhost:81
+
+Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+Connection: keep-alive
+
+
+
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header></soap-env:Header><soap-env:Body><Discover xmlns="urn:schemas-microsoft-com:xml-analysis"><RequestType xmlns="">DISCOVER_DATASOURCES</RequestType><Restrictions><RestrictionList></RestrictionList></Restrictions><Properties><PropertyList><Content>Data</Content></PropertyList></Properties></Discover></soap-env:Body></soap-env:Envelope>

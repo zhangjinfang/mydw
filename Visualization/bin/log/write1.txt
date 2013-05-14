@@ -1,0 +1,59 @@
+send:
+================================================================================
+HTTP/1.1 200 OK
+
+Server: Microsoft-IIS/5.1
+
+Date: Tue, 26 Dec 2006 12:13:11 GMT
+
+Content-Type: text/xml
+
+charset: "utf-8"
+
+Transfer-encoding: chunked
+
+
+
+355
+
+<?xml version="1.0"?>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+
+<SOAP-ENV:Body>
+
+<ns1:DiscoverResponse xmlns:ns1="urn:schemas-microsoft-com:xml-analysis">
+
+<ns1:return xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset">
+
+<row><DataSourceName>Local Analysis Server</DataSourceName>
+
+<DataSourceDescription>SCUT LAB24 Analysis Server on local machine</DataSourceDescription>
+
+<URL>http://localhost:81</URL>
+
+<DataSourceInfo>Local Analysis Server</DataSourceInfo>
+
+<ProviderName>Microsoft XML for Analysis</ProviderName>
+
+<ProviderType>MDP</ProviderType>
+
+<AuthenticationMode>Unauthenticated</AuthenticationMode>
+
+</row></root>
+
+</ns1:return>
+
+</ns1:DiscoverResponse>
+
+</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>
+
+0
+
+
+
+

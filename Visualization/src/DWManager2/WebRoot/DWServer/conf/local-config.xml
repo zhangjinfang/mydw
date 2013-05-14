@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Config>
+  <FoodMart2000>
+    <Sales>
+      <Alg>alg</Alg>
+      <QryAlg>qryAlg</QryAlg>
+      <Changed>0</Changed>
+    </Sales>
+  </FoodMart2000>
+  <FoodMart>
+    <Sales>
+      <Alg>MolapCCPreComputation</Alg>
+      <QryAlg>MolapCCInvertListQuery</QryAlg>
+      <Changed>0</Changed>
+    </Sales>
+  </FoodMart>
+</Config>
+

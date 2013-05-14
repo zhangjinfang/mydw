@@ -1,0 +1,3667 @@
+show the ParsedMDX.......
+schema name is:test
+cube name is:mySales
+show one of the Axes:
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[Measures].[store_sales]
+                the member's value is:store_sales
+                the member's level is:MeasuresLevel
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[Measures].[store_cost]
+                the member's value is:store_cost
+                the member's level is:MeasuresLevel
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[Measures].[unit_sales]
+                the member's value is:unit_sales
+                the member's level is:MeasuresLevel
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+show one of the Axes:
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts]
+                the member's value is:Allcusts
+                the member's level is:conttry
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Acapulco]
+                the member's value is:Acapulco
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Camacho]
+                the member's value is:Camacho
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Guadalajara]
+                the member's value is:Guadalajara
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Hidalgo]
+                the member's value is:Hidalgo
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[La Cruz]
+                the member's value is:La Cruz
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Merida]
+                the member's value is:Merida
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Mexico City]
+                the member's value is:Mexico City
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Orizaba]
+                the member's value is:Orizaba
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[San Andres]
+                the member's value is:San Andres
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Santa Anita]
+                the member's value is:Santa Anita
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Santa Fe]
+                the member's value is:Santa Fe
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Tixapan]
+                the member's value is:Tixapan
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[Mexico].[Tlaxiaco]
+                the member's value is:Tlaxiaco
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, Mexico}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Albany]
+                the member's value is:Albany
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Altadena]
+                the member's value is:Altadena
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Anacortes]
+                the member's value is:Anacortes
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Arcadia]
+                the member's value is:Arcadia
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Ballard]
+                the member's value is:Ballard
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Beaverton]
+                the member's value is:Beaverton
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Bellflower]
+                the member's value is:Bellflower
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Bellingham]
+                the member's value is:Bellingham
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Berkeley]
+                the member's value is:Berkeley
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Beverly Hills]
+                the member's value is:Beverly Hills
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Bremerton]
+                the member's value is:Bremerton
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Burbank]
+                the member's value is:Burbank
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Burien]
+                the member's value is:Burien
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Burlingame]
+                the member's value is:Burlingame
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Chula Vista]
+                the member's value is:Chula Vista
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Colma]
+                the member's value is:Colma
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Concord]
+                the member's value is:Concord
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Coronado]
+                the member's value is:Coronado
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Corvallis]
+                the member's value is:Corvallis
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Daly City]
+                the member's value is:Daly City
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Downey]
+                the member's value is:Downey
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Edmonds]
+                the member's value is:Edmonds
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[El Cajon]
+                the member's value is:El Cajon
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Everett]
+                the member's value is:Everett
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Fremont]
+                the member's value is:Fremont
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Glendale]
+                the member's value is:Glendale
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Grossmont]
+                the member's value is:Grossmont
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Imperial Beach]
+                the member's value is:Imperial Beach
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Issaquah]
+                the member's value is:Issaquah
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Kirkland]
+                the member's value is:Kirkland
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[La Jolla]
+                the member's value is:La Jolla
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[La Mesa]
+                the member's value is:La Mesa
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Lake Oswego]
+                the member's value is:Lake Oswego
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Lakewood]
+                the member's value is:Lakewood
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Lebanon]
+                the member's value is:Lebanon
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Lemon Grove]
+                the member's value is:Lemon Grove
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Lincoln Acres]
+                the member's value is:Lincoln Acres
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Long Beach]
+                the member's value is:Long Beach
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Los Angeles]
+                the member's value is:Los Angeles
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Lynnwood]
+                the member's value is:Lynnwood
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Marysville]
+                the member's value is:Marysville
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Mill Valley]
+                the member's value is:Mill Valley
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Milwaukie]
+                the member's value is:Milwaukie
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[National City]
+                the member's value is:National City
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Newport Beach]
+                the member's value is:Newport Beach
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Novato]
+                the member's value is:Novato
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Oakland]
+                the member's value is:Oakland
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Olympia]
+                the member's value is:Olympia
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Oregon City]
+                the member's value is:Oregon City
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Palo Alto]
+                the member's value is:Palo Alto
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Pomona]
+                the member's value is:Pomona
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Port Orchard]
+                the member's value is:Port Orchard
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Portland]
+                the member's value is:Portland
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Puyallup]
+                the member's value is:Puyallup
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Redmond]
+                the member's value is:Redmond
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Redwood City]
+                the member's value is:Redwood City
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Renton]
+                the member's value is:Renton
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Richmond]
+                the member's value is:Richmond
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Salem]
+                the member's value is:Salem
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[San Carlos]
+                the member's value is:San Carlos
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[San Diego]
+                the member's value is:San Diego
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[San Francisco]
+                the member's value is:San Francisco
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[San Gabriel]
+                the member's value is:San Gabriel
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[San Jose]
+                the member's value is:San Jose
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Santa Cruz]
+                the member's value is:Santa Cruz
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Santa Monica]
+                the member's value is:Santa Monica
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Seattle]
+                the member's value is:Seattle
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Sedro Woolley]
+                the member's value is:Sedro Woolley
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Spokane]
+                the member's value is:Spokane
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Spring Valley]
+                the member's value is:Spring Valley
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Tacoma]
+                the member's value is:Tacoma
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Torrance]
+                the member's value is:Torrance
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[W. Linn]
+                the member's value is:W. Linn
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Walla Walla]
+                the member's value is:Walla Walla
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[West Covina]
+                the member's value is:West Covina
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Woodburn]
+                the member's value is:Woodburn
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Woodland Hills]
+                the member's value is:Woodland Hills
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+   show one of the QueryTuples in the axis:
+         show the members in this QueryTuple: 
+            the member is:[cust.cust].[Allcusts].[USA].[Yakima]
+                the member's value is:Yakima
+                the member's level is:city
+                the member's ancestorVals:{Allcusts, USA}
+                the member's ancestorLevels:{(All), conttry}
+                isAll:1
+show one of the QueryTuples in the slicer:
+         show the members in this QueryTuple: 
+            the member is:[time.time].[1997]
+                the member's value is:1997
+                the member's level is:year
+                the member's ancestorVals:{}
+                the member's ancestorLevels:{}
+                isAll:0
+INFO: class AggFileReader--Constructor
+time.time.year
+time.time.month
+time.time.id
+cust.cust.conttry
+cust.cust.city
+cust.cust.id
+store.store.contry
+store.store.city
+store.store.id
+Measures.Measures.store_sales
+Measures.Measures.store_cost
+Measures.Measures.unit_sales
+INFO: class MolapCCInvertListQuery--Execute query
+INFO: class MolapCCInvertListQuery--getQueryPoints
+INFO: getCartesianProduct
+dim:Measures
+hier:Measures
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:Measures
+hier:Measures
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:Measures
+hier:Measures
+INFO: getCartesianProduct
+dim:cust
+hier:cust
+cust.cust.conttry:Allcusts
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:Mexico
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+dim:cust
+hier:cust
+cust.cust.conttry:USA
+INFO: getCartesianProduct
+time.time.year:1997
+INFO: class MolapCCInvertListQuery--execute point query
+3.185the query time:3.185
+mdx:SELECT {[Measures].[store_sales], [Measures].[store_cost], [Measures].[unit_sales]} ON columns, Hierarchize(Union(Union({[cust].[Allcusts]}, [cust].[Allcusts].[Mexico].Children), [cust].[Allcusts].[USA].Children)) ON rows FROM mySales WHERE ([time].[1997])
+ResultSet is:
+0:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+1:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+2:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+3:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+4:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+5:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+6:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+7:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+8:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+9:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+10:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+11:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+12:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+13:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+14:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+15:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+16:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+17:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+18:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+19:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+20:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+21:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+22:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+23:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+24:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+25:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+26:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+27:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+28:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+29:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+30:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+31:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+32:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+33:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+34:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+35:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+36:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+37:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+38:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+39:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+40:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+41:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+42:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+43:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+44:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+45:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+46:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+47:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+48:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+49:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+50:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+51:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+52:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+53:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+54:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+55:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+56:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+57:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+58:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+59:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+60:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+61:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+62:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+63:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+64:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+65:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+66:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+67:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+68:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+69:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+70:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+71:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+72:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+73:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+74:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+75:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+76:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+77:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+78:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+79:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+80:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+81:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+82:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+83:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+84:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+85:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+86:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+87:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+88:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+89:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+90:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+91:
+formatString:Standard
+getformatString:565,238.13
+isNull:0
+value:565238
+92:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+93:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+94:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+95:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+96:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+97:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+98:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+99:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+100:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+101:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+102:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+103:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+104:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+105:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+106:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+107:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+108:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+109:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+110:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+111:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+112:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+113:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+114:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+115:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+116:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+117:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+118:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+119:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+120:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+121:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+122:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+123:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+124:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+125:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+126:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+127:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+128:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+129:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+130:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+131:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+132:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+133:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+134:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+135:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+136:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+137:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+138:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+139:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+140:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+141:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+142:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+143:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+144:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+145:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+146:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+147:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+148:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+149:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+150:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+151:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+152:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+153:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+154:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+155:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+156:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+157:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+158:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+159:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+160:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+161:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+162:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+163:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+164:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+165:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+166:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+167:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+168:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+169:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+170:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+171:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+172:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+173:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+174:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+175:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+176:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+177:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+178:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+179:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+180:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+181:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+182:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+183:
+formatString:Standard
+getformatString:225,627.23
+isNull:0
+value:225627
+184:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+185:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+186:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+187:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+188:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+189:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+190:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+191:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+192:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+193:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+194:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+195:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+196:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+197:
+formatString:Standard
+getformatString:  0.00
+isNull:1
+value:0
+198:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+199:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+200:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+201:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+202:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+203:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+204:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+205:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+206:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+207:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+208:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+209:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+210:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+211:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+212:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+213:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+214:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+215:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+216:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+217:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+218:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+219:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+220:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+221:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+222:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+223:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+224:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+225:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+226:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+227:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+228:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+229:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+230:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+231:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+232:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+233:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+234:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+235:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+236:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+237:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+238:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+239:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+240:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+241:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+242:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+243:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+244:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+245:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+246:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+247:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+248:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+249:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+250:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+251:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+252:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+253:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+254:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+255:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+256:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+257:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+258:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+259:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+260:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+261:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+262:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+263:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+264:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+265:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+266:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+267:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+268:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+269:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+270:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+271:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+272:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+273:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+274:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+275:
+formatString:Standard
+getformatString:266,773.00
+isNull:0
+value:266773
+serializeSchema time:0.01
+serializeOlapInfo time:0.01
+Axes0:0.01
+tuplei0:0.01
+tuplei1:0.01
+tuplei2:0.01
+End Axes0:0.01
+Axes1:0.01
+tuplei0:0.01
+tuplei1:2.323
+tuplei2:2.323
+tuplei3:2.323
+tuplei4:2.323
+tuplei5:2.323
+tuplei6:2.323
+tuplei7:2.323
+tuplei8:2.333
+tuplei9:2.333
+tuplei10:2.333
+tuplei11:2.333
+tuplei12:2.333
+tuplei13:2.333
+tuplei14:2.333
+tuplei15:2.333
+tuplei16:2.333
+tuplei17:2.333
+tuplei18:2.333
+tuplei19:2.333
+tuplei20:2.333
+tuplei21:2.333
+tuplei22:2.333
+tuplei23:2.333
+tuplei24:2.333
+tuplei25:2.333
+tuplei26:2.333
+tuplei27:2.333
+tuplei28:2.333
+tuplei29:2.343
+tuplei30:2.343
+tuplei31:2.343
+tuplei32:2.343
+tuplei33:2.343
+tuplei34:2.343
+tuplei35:2.343
+tuplei36:2.343
+tuplei37:2.343
+tuplei38:2.343
+tuplei39:2.343
+tuplei40:2.343
+tuplei41:2.343
+tuplei42:2.343
+tuplei43:2.343
+tuplei44:2.343
+tuplei45:2.343
+tuplei46:2.343
+tuplei47:2.343
+tuplei48:2.343
+tuplei49:2.343
+tuplei50:2.343
+tuplei51:2.343
+tuplei52:2.353
+tuplei53:2.353
+tuplei54:2.353
+tuplei55:2.353
+tuplei56:2.353
+tuplei57:2.353
+tuplei58:2.353
+tuplei59:2.353
+tuplei60:2.353
+tuplei61:2.353
+tuplei62:2.353
+tuplei63:2.353
+tuplei64:2.353
+tuplei65:2.353
+tuplei66:2.353
+tuplei67:2.353
+tuplei68:2.353
+tuplei69:2.353
+tuplei70:2.353
+tuplei71:2.353
+tuplei72:2.353
+tuplei73:2.353
+tuplei74:2.363
+tuplei75:2.363
+tuplei76:2.363
+tuplei77:2.363
+tuplei78:2.363
+tuplei79:2.363
+tuplei80:2.363
+tuplei81:2.363
+tuplei82:2.363
+tuplei83:2.363
+tuplei84:2.363
+tuplei85:2.363
+tuplei86:2.363
+tuplei87:2.373
+tuplei88:2.373
+tuplei89:2.373
+tuplei90:2.373
+tuplei91:2.373
+End Axes1:2.373
+After Axis:2.373
+After slicerAxis:2.373
+serializeAxesTF time:2.373
+serializeCellData time:2.393
