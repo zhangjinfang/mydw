@@ -1,37 +1,8 @@
-Engin: OLAPÒýÇæ
-metadata£ºÔªÊý¾ÝÄ£¿é
-PreComputation£ºÔ¤¼ÆËãÄ£¿é
-Query£º²éÑ¯Ä£¿é
-Visualization£º¿ØÖÆÌ¨¹ÜÀíÄ£¿é
-TestCenter£º¹²ÏíÄ¿Â¼£¬´æ·Å¸öÄ£¿éµÄ¹«¹²²âÊÔÊý¾ÝÒÔ¼°²âÊÔÄ£¿é£¬ÇëÉú³É²âÊÔÊý¾ÝÊ±£¬Ö¸Ïò¸ÃÄ¿Â¼£¬²¢ÔÚ´ËÄ¿Â¼Ð´²âÊÔ³ÌÐò
-include£º¹²ÏíÄ¿Â¼£¬Çë½«.hÎÄ¼þ·ÅÈë´ËÄ¿Â¼£¬ÒÔÍ¬²½¸üÐÂ´ËÄ¿Â¼µÄÍ·ÎÄ¼þ
-lib: ¹²ÏíÄ¿Â¼£¬ÇëÔÚProject->Settings->General->Output filesÉèÖÃÎª..\lib£¬ÒÔÍ¬²½¸üÐÂ´ËÄ¿Â¼µÄ¿âÎÄ¼þ
-
-
-
-
-
-
-DWSchemaSLib.lib(XSchemas.obj) : error LNK2001: unresolved external symbol "public: class XElement * __thiscall XElementList::item(unsigned int)" (?item@XElementList@@QAEPAVXElement@@I@Z)
-DWSchemaSLib.lib(XSchemas.obj) : error LNK2001: unresolved external symbol "public: unsigned int __thiscall XElementList::getLength(void)" (?getLength@XElementList@@QAEIXZ)
-DWSchemaSLib.lib(XSchemas.obj) : error LNK2001: unresolved external symbol "public: bool __thiscall XElementList::hasChildNodes(void)" (?hasChildNodes@XElementList@@QAE_NXZ)
-DWSchemaSLib.lib(XSchemas.obj) : error LNK2001: unresolved external symbol "public: class XElement * __thiscall DWConfig::getRoot(void)" (?getRoot@DWConfig@@QAEPAVXElement@@XZ)
-Debug/TestPreComputation.exe : fatal error LNK1120: 10 unresolved externals
-Ö´ÐÐ link.exe Ê±³ö´í.
-
-TestPreComputation.exe - 1 error(s), 0 warning(s)
-
-
-XODBCDatabase.cpp
-f:\À¥¹¤\git\mydw\xodbc\xodbc\xodbc(v6)\src\xodbc\xodbcdatabase.cpp(3) : fatal error C1083: Cannot open include file: './XODBCDatabase.h': No such file or directory
-XODBCDataSource.cpp
-f:\À¥¹¤\git\mydw\xodbc\xodbc\xodbc(v6)\src\xodbc\xodbcdatasource.cpp(1) : fatal error C1083: Cannot open include file: 'XODBC/XODBCDataSource.h': No such file or directory
-XODBCError.cpp
-f:\À¥¹¤\git\mydw\xodbc\xodbc\xodbc(v6)\src\xodbc\xodbcerror.cpp(1) : fatal error C1083: Cannot open include file: 'xodbc/XODBCError.h': No such file or directory
-XODBCException.cpp
-f:\À¥¹¤\git\mydw\xodbc\xodbc\xodbc(v6)\src\xodbc\xodbcexception.cpp(1) : fatal error C1083: Cannot open include file: 'xodbc/XODBCException.h': No such file or directory
-XODBCRecordset.cpp
-f:\À¥¹¤\git\mydw\xodbc\xodbc\xodbc(v6)\src\xodbc\xodbcrecordset.cpp(1) : fatal error C1083: Cannot open include file: 'xodbc/XODBCRecordset.h': No such file or directory
-Ö´ÐÐ cl.exe Ê±³ö´í.
-
-xodbcv6d.lib - 1 error(s), 0 warning(s)
+Engin: OLAPï¿½ï¿½ï¿½ï¿½
+metadataï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
+PreComputationï¿½ï¿½Ô¤ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
+Queryï¿½ï¿½ï¿½ï¿½Ñ¯Ä£ï¿½ï¿½
+Visualizationï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
+TestCenterï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Å¸ï¿½Ä£ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½é£¬ï¿½ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ä¿Â¼Ð´ï¿½ï¿½ï¿½Ô³ï¿½ï¿½ï¿½
+includeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ë½«.hï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½Ä¿Â¼ï¿½ï¿½Í·ï¿½Ä¼ï¿½
+lib: ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Project->Settings->General->Output filesï¿½ï¿½ï¿½ï¿½Îª..\libï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½Ä¿Â¼ï¿½Ä¿ï¿½ï¿½Ä¼ï¿½
